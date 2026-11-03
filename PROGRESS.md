@@ -52,11 +52,27 @@ The fixed 7/4/3 example has actual errors and remains published. Final test outp
 were not used to retrain or select the checkpoint. A text-generation baseline and
 head-only training ablation were omitted to keep the requested scope focused.
 
-## Publication
+## Publication and final verification
 
-Code and model release are prepared for the new public repository. GitHub's
-connected tool lacks repository/release creation, so the authenticated GitHub CLI
-will be used. No Hugging Face write token is configured; a GitHub Release is the
-alternative weight host allowed by the original specification. No Git LFS is used.
-Anonymous released-source/weight download verification will be recorded after
-publication. The original GitHub repository and Hugging Face Space are untouched.
+- Public code: https://github.com/gisbi-kim/mnist-visual-decision-lab
+- Public weights: https://github.com/gisbi-kim/mnist-visual-decision-lab/releases/tag/v0.1.0
+- GitHub CLI created this new repository and release because the connected tool
+  lacks those operations. A GitHub Release is the alternative weight host allowed
+  by the original specification; no HF write token or Git LFS is needed.
+- Anonymous source clone at release commit 53ddab87b797cf2e992c245369a816a3f04e7990,
+  anonymous weight download, and pinned base download into a new empty cache all
+  passed. Archive and every weight/base file matched the SHA-256 manifest.
+- The weight + cold-cache base download took 61.1 seconds on this connection.
+  Offline CPU inference then passed in a separate process using the released
+  source and downloaded weights. The existing working Python environment was
+  reused; this does not resolve the fresh-environment App Control restriction.
+- Evidence: results/public-verification.json. The local CUDA app also passed
+  real HTTP scene and prediction requests; results/http-app-check.json records
+  the actual outputs, including errors on the fixed example.
+- The finished CUDA app is running at http://127.0.0.1:7860 on this computer.
+  The background process ID is stored locally in runs/app.pid.
+- The original GitHub repository and Hugging Face Space are untouched.
+
+Remaining external verification: physical Apple Silicon MPS, a policy-permitted
+fresh Python installation, and visual browser inspection. No completed status is
+claimed for those checks.

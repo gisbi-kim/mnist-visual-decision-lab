@@ -109,6 +109,14 @@ including preprocessing and synchronization, excluding model initialization and
 download. All 16 compared actions agreed; probabilities differed by up to 0.0283.
 See `results/platform-comparison.json` for the scope and precision differences.
 
+The public release was independently cloned and downloaded **without login** into
+new directories and an empty base-model cache. Every checksum passed, followed
+by offline CPU inference from that released source. This reused the working Python
+environment; the Windows clean-environment policy limitation still applies. See
+`results/public-verification.json`. Local CUDA HTTP requests also performed actual
+model inference (`results/http-app-check.json`); browser visual inspection remains
+unverified because browser automation is disabled in the development environment.
+
 ## Dataset design
 
 - Preserve the official MNIST train/test distinction. Split original training

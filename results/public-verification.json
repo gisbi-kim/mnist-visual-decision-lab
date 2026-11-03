@@ -1,0 +1,81 @@
+{
+  "release_url": "https://github.com/gisbi-kim/mnist-visual-decision-lab/releases/tag/v0.1.0",
+  "source_commit": "53ddab87b797cf2e992c245369a816a3f04e7990",
+  "source_download": "Anonymous HTTPS git clone; credential helper and extra HTTP headers disabled",
+  "weight_download": "Anonymous urllib HTTPS; archive and all file SHA-256 verified",
+  "base_download": "New empty HF_HOME and HF_HUB_CACHE; implicit token disabled; all pinned base file SHA-256 verified",
+  "fresh_python_environment": false,
+  "environment_note": "Reused working dedicated Python environment; second new environment was blocked by Windows App Control WinError 4551",
+  "offline_inference": true,
+  "device": "cpu",
+  "model_load_seconds_from_new_cache": 2.0680417001713067,
+  "archive_bytes": 86549227,
+  "archive_sha256": "77c601ff853da087598da8c86bcc93248452a450048dbd2719f37be4d7e677d7",
+  "results": [
+    {
+      "instruction": "빨간 상자에 있는 홀수를 골라.",
+      "prediction": {
+        "action": "LEFT",
+        "probabilities": {
+          "LEFT": 0.9816511869430542,
+          "CENTER": 0.006244579330086708,
+          "RIGHT": 0.0064138914458453655,
+          "NONE": 0.00569037813693285
+        },
+        "latency_ms": 790.901199914515,
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "cpu_fallback_enabled": false
+      }
+    },
+    {
+      "instruction": "가장 작은 홀수를 골라.",
+      "prediction": {
+        "action": "LEFT",
+        "probabilities": {
+          "LEFT": 0.9822942018508911,
+          "CENTER": 0.006151868961751461,
+          "RIGHT": 0.006032849662005901,
+          "NONE": 0.005521122366189957
+        },
+        "latency_ms": 766.8839998077601,
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "cpu_fallback_enabled": false
+      }
+    },
+    {
+      "instruction": "짝수를 골라.",
+      "prediction": {
+        "action": "CENTER",
+        "probabilities": {
+          "LEFT": 0.007155117113143206,
+          "CENTER": 0.9781266450881958,
+          "RIGHT": 0.007977185770869255,
+          "NONE": 0.0067409551702439785
+        },
+        "latency_ms": 766.558799892664,
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "cpu_fallback_enabled": false
+      }
+    },
+    {
+      "instruction": "파란 상자에 있는 짝수를 골라.",
+      "prediction": {
+        "action": "RIGHT",
+        "probabilities": {
+          "LEFT": 0.007056694943457842,
+          "CENTER": 0.007005129009485245,
+          "RIGHT": 0.9800246357917786,
+          "NONE": 0.005913577042520046
+        },
+        "latency_ms": 773.8443000707775,
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "cpu_fallback_enabled": false
+      }
+    }
+  ],
+  "weights_and_empty_cache_base_download_seconds": 61.0565779
+}
