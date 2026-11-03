@@ -1,0 +1,11 @@
+{
+  "examples": 16,
+  "cuda_dtype": "torch.bfloat16",
+  "cpu_dtype": "torch.float32",
+  "max_probability_difference": 0.028302371501922607,
+  "action_agreement": 1.0,
+  "cpu_median_ms": 770.2316500945017,
+  "cuda_median_ms": 70.54269989021122,
+  "mps": "UNVERIFIED: no physical Apple Silicon Mac available",
+  "note": "Canonical and fixed test-subset inputs, matched weights and processor. Timings include preprocessing and synchronization; warm-up effects can remain in canonical examples."
+}

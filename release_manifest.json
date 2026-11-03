@@ -1,0 +1,122 @@
+{
+  "version": "v0.1.0",
+  "url": "https://github.com/gisbi-kim/mnist-visual-decision-lab/releases/download/v0.1.0/mnist-visual-decision-lab-v0.1.0.zip",
+  "bytes": 86549227,
+  "sha256": "77c601ff853da087598da8c86bcc93248452a450048dbd2719f37be4d7e677d7",
+  "files": {
+    "adapter_config.json": {
+      "bytes": 1824,
+      "sha256": "2b17e14302dac7fecdc133228a7fd5136ce0e911c8d1442a30e3d2285047f4e5"
+    },
+    "adapter_model.safetensors": {
+      "bytes": 43346432,
+      "sha256": "5a9c02a2e19b4489f1de06072df6f0ae0ece1f3ed34b106dc3aa95945afcd3f0"
+    },
+    "calibration.json": {
+      "bytes": 158,
+      "sha256": "65a72a6cbb5abffb2bd0e2b14a18afc676f471046f7785a2c80cebbb69cb5294"
+    },
+    "chat_template.jinja": {
+      "bytes": 7908,
+      "sha256": "306abaf09cf3a6c0d14128373a72925bda3d7de2616a5642804d9768c7d2f78c"
+    },
+    "CLEF_LICENSE.txt": {
+      "bytes": 11544,
+      "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a"
+    },
+    "inference_schema.json": {
+      "bytes": 872,
+      "sha256": "77cdb547a3ba46800af3401beb2dd490d75fd4f419402f7e7f2df930664d287b"
+    },
+    "joint_head.safetensors": {
+      "bytes": 54661902,
+      "sha256": "fcae47daa41de0b24bff421222607b15057337cc98037db32d510b780bad8b5e"
+    },
+    "joint_head_config.json": {
+      "bytes": 123,
+      "sha256": "22d77a8948eed43540c6112f8f79f0088ee1162dcefa2fe564d43721d9f21849"
+    },
+    "LICENSE": {
+      "bytes": 11543,
+      "sha256": "861762745fff6d0216ac262632b9960e44522e39598c50ada19ddfffb44fd84b"
+    },
+    "processor_config.json": {
+      "bytes": 1281,
+      "sha256": "729f505a1a4ad800ee9e41880374e37a765d3cfacddd9d7c722ef492755f849b"
+    },
+    "README.md": {
+      "bytes": 1329,
+      "sha256": "41ae7f8886acae22c2fd818323c3c340e6dc7e5de3bfa8c45fc3753c896a01e0"
+    },
+    "tokenizer.json": {
+      "bytes": 19989325,
+      "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523"
+    },
+    "tokenizer_config.json": {
+      "bytes": 7486,
+      "sha256": "a83b46fe00ff80606f59579e23edba71c78c919a4d3bfc5fb75a6d1983236617"
+    },
+    "unsloth_decision_config.json": {
+      "bytes": 250,
+      "sha256": "df1657227b3d337bc7ea5540465f33ac6affc950a4f3e025716e8698383a0900"
+    }
+  },
+  "unpacked_bytes": 118041977,
+  "base_model": "Qwen/Qwen3.5-0.8B",
+  "base_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+  "base_files": {
+    ".gitattributes": {
+      "bytes": 1570,
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930"
+    },
+    "chat_template.jinja": {
+      "bytes": 7755,
+      "sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80"
+    },
+    "config.json": {
+      "bytes": 2907,
+      "sha256": "b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204"
+    },
+    "LICENSE": {
+      "bytes": 11544,
+      "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a"
+    },
+    "merges.txt": {
+      "bytes": 3353259,
+      "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+    },
+    "model.safetensors-00001-of-00001.safetensors": {
+      "bytes": 1746942600,
+      "sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696"
+    },
+    "model.safetensors.index.json": {
+      "bytes": 50900,
+      "sha256": "d8a08838a613b025eb7952ed9db11696213e57e76a375661ef5c12f9dd5dcf4e"
+    },
+    "preprocessor_config.json": {
+      "bytes": 390,
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+    },
+    "README.md": {
+      "bytes": 61705,
+      "sha256": "87a163af54f32fa608a0f8d3ac67945c53dd2b4a7c96740b3d7fdc28e8458864"
+    },
+    "tokenizer.json": {
+      "bytes": 12807982,
+      "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+    },
+    "tokenizer_config.json": {
+      "bytes": 16709,
+      "sha256": "49e2b6e395f959f077f1e992b338919c0d4a9732fc6e613995e06557f843500c"
+    },
+    "video_preprocessor_config.json": {
+      "bytes": 385,
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+    },
+    "vocab.json": {
+      "bytes": 6722759,
+      "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+    }
+  },
+  "selected_step": 2000
+}

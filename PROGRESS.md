@@ -1,78 +1,62 @@
-# Work in progress — 2026-11-03
+# Execution notes — 2026-11-03
 
-User scope: original MNIST Visual Decision Lab design, emphasis on good data,
-approximately 1–3 hours of local GPU training; do not expand the comparison study.
+Original scope retained: Qwen3.5-0.8B + LoRA + Clef, with effort concentrated on
+balanced bilingual data and held-out evaluation. No paid GPU or hosting was used.
 
-Hardware verified locally: NVIDIA RTX 4070 Ti SUPER, 16,376 MiB VRAM.
-At setup, other apps used about 4,988 MiB; 11,074 MiB was free.
-Windows, Python 3.11, PyTorch 2.14.1+cu130, NVIDIA driver 610.88.
+## Completed locally
 
-Dataset prepared: 18,048 bilingual training rows from 2,265 scenes and 6,380
-distinct original MNIST training images. Split source images before composing scenes.
-Balanced task × language × feasible action quotas; duplicate maximum/minimum and
-multiple-match instructions are rejected. Withheld expression templates and two
-condition combinations have separate final evaluation suites. Renderer variations
-are independent of targets. Five semantic/leakage/rendering tests pass.
+- Actual hardware: RTX 4070 Ti SUPER, 16,376 MiB VRAM; Ryzen 7 9800X3D;
+  approximately 64 GB system RAM. This machine is not a 5070 Ti.
+- 18,048 training instructions, 2,265 scenes and 6,380 original MNIST images.
+  Source-image partitions, feasible action quotas, held-out wording/combinations,
+  renderer variations and metadata are described in README and data-summary.json.
+- Actual image encoder audit and seven project tests passed. Smoke training,
+  separate-process reload and 16-example overfit passed; evidence is in
+  results/preflight and results/encoder-audit.json.
+- Main training: 6,000 steps, 4,139.333 seconds (69.0 minutes), batch 16,
+  LoRA rank/alpha 16, bfloat16, no 4-bit quantization. Peak allocated/reserved
+  GPU memory: 2.77/2.97 GiB. Best validation checkpoint: step 2,000, 253/256.
+- Calibration used 752 separate rows. Four final test suites contain 5,056
+  instructions; accuracy is 99.14%, 97.87%, 98.83%, and 97.85%.
+- Actual CPU/CUDA predictions, latency, input ablations, same-image instruction
+  changes, CNN+rules baseline and high-confidence failures are recorded in RESULTS.md.
+- Unsloth and portable CUDA agreed on all 16 checked validation inputs for the
+  selected trained weights; max uncalibrated probability difference 0.001142.
+- Portable CPU/CUDA agreed on all 16 matched diagnostic inputs; max calibrated
+  probability difference 0.028303. This is a sampled check, not a universal guarantee.
+- Versioned weights and pinned base files have SHA-256 manifests. The archive is
+  86,549,227 bytes. Windows inference wheels + base + weights total 3,909,073,744
+  bytes, excluding Python/Git installers, source transfer and network metadata.
 
-Initial environment troubleshooting: pandas 3.1.0 stalled during import in this
-Windows environment. pandas 2.3.3 loaded successfully. Unsloth imports successfully;
-the installed xformers binary mismatches this PyTorch version, so Unsloth uses
-PyTorch attention. No security settings or other application processes were changed.
+## Environment findings and limits
 
-Base model pinned to Qwen/Qwen3.5-0.8B revision
-2fc06364715b967f1860aea9cf38778875588b17, downloaded successfully.
+pandas 3.1.0 stalled during import; pandas 2.3.3 worked. The installed xformers
+binary did not match PyTorch, so Unsloth used PyTorch attention. Reference PyTorch
+implementations were used for unavailable optimized causal-convolution/linear-
+attention kernels. These were actual successful runs, not simulated outputs.
 
-Smoke training, saved-weight reload on CPU/CUDA, and 16-example overfit passed.
-Overfit achieved 16/16 correct. Unsloth vs portable CUDA max probability difference
-on eight validation examples: 0.000862. CPU vs CUDA: 0.001920. All actions agreed.
+A second new Python environment encountered Windows App Control WinError 4551
+while loading both CPU-only and CUDA PyTorch DLLs. The latter DLL's hash matched
+the working environment. Security settings were not changed. Therefore a clean
+Python-environment launch is **not verified** on this computer. The dedicated
+working environment performs CPU and CUDA inference successfully. A separate
+empty Hugging Face cache, anonymous base download and CPU smoke inference passed;
+that is a cold-cache test, not a new-environment success claim.
 
-Main training is running: `train.py --run main --steps 6000 --seconds 7200
---batch 16 --accum 1 --validate-every 200 --val-count 256`.
-Process started 2026-11-03 10:14 KST; actual optimizer work started about 10:15.
-Live files: `main.log`, `runs/main/status.json`, `runs/main/validation.json`.
-At step 2400, best validation subset accuracy is 98.83% (selected at step 2000).
-No final VLM test result yet.
-The training process uses about 2.8 GiB allocated / 3.0 GiB reserved with checkpointing.
+Apple Silicon MPS is **unverified** because no physical Mac is available.
+Browser automation is disabled in Work settings, so visual browser verification
+was not performed; server/HTTP checks are recorded separately. No settings were
+changed to bypass either restriction.
 
-Original-scope CPU CNN+rules baseline completed (`results/baseline/`). It trains on
-the same training scenes, parses the limited template vocabulary, and detects
-border colors from pixels. It is never used in the VLM app inference path.
+The fixed 7/4/3 example has actual errors and remains published. Final test outputs
+were not used to retrain or select the checkpoint. A text-generation baseline and
+head-only training ablation were omitted to keep the requested scope focused.
 
-Portable Flask UI and direct HTTP real-inference test passed. Browser automation
-is disabled in Work settings, so no browser screenshot verification was performed.
-The temporary smoke-model web server was stopped after the check.
+## Publication
 
-Fresh environment `.verify-env` contains no Unsloth/bitsandbytes/Triton, but
-Windows App Control returned WinError 4551 when loading both the CPU wheel and
-the subsequently installed CUDA wheel there. The CUDA DLL hash matches the
-working environment. Security settings were not changed. Clean-environment
-execution is therefore blocked on this computer, and must not be reported as
-verified. CPU inference works in `.venv` with the CUDA PyTorch build.
-Cold-cache, unauthenticated base download and CPU smoke inference passed in that
-working environment with `HF_HOME=.verify-cache` (`cold-cache.log`); the initial
-load including download took about 72.8 seconds. This is not a fresh Python
-environment success claim.
-
-`finish_local.ps1` is waiting for the main training process (PID 36892), then
-automatically runs calibration, all four test suites, CUDA/CPU diagnostics,
-platform comparison and `make_report.py`. It writes `final-evaluation.log`.
-It uses the working `.venv` for both CPU and CUDA; no claim of isolated-env
-execution should be made. This pipeline does not publish anything.
-
-Remaining: finish main training; calibrate best weights on calibration partition;
-evaluate all four held-out suites; run diagnostics and cross-device comparison;
-package/hash weights; prepare final results; create new public GitHub repo and
-release, verify public download in a new folder, and start the finished local app.
-GitHub connector has no repository/release creation tool; use authenticated gh CLI
-for those operations. No HF token is configured; GitHub Release is an authorized
-alternative distribution host under the original spec (no LFS usage needed).
-
-Finalization tools are implemented: `finish_local.ps1` runs evaluation and
-`make_report.py`; `package_release.py` stages a versioned ZIP and
-`release_manifest.json` (after evaluation, not yet run); `download_model.py`
-verifies both the weight archive and all pinned base model files. The base files
-are 1,769,980,465 bytes; the measured Windows CUDA inference wheels total
-2,052,544,052 bytes. See `docs/base-model-files.json` and `docs/download-sizes.json`.
-Seven project tests pass, actual encoder leakage/image tests pass, source compiles.
-
-Mac MPS has not been tested on a physical Mac.
+Code and model release are prepared for the new public repository. GitHub's
+connected tool lacks repository/release creation, so the authenticated GitHub CLI
+will be used. No Hugging Face write token is configured; a GitHub Release is the
+alternative weight host allowed by the original specification. No Git LFS is used.
+Anonymous released-source/weight download verification will be recorded after
+publication. The original GitHub repository and Hugging Face Space are untouched.

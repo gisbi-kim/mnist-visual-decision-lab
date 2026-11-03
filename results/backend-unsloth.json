@@ -1,0 +1,282 @@
+{
+  "backend": "unsloth",
+  "rows": [
+    {
+      "scene_id": "validation-00112",
+      "instruction": "파란 상자에 있는 짝수는 어느 위치에 있어?",
+      "gold": "RIGHT",
+      "prediction": {
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 0.9995,
+        "probabilities": {
+          "LEFT": 0.0002,
+          "CENTER": 0.0002,
+          "RIGHT": 0.9995,
+          "NONE": 0.0001
+        },
+        "answer": "RIGHT"
+      }
+    },
+    {
+      "scene_id": "validation-00037",
+      "instruction": "파란 상자에 있는 가장 큰 숫자를 찾아. 없으면 NONE을 선택해.",
+      "gold": "LEFT",
+      "prediction": {
+        "type": "choice",
+        "choice": "LEFT",
+        "confidence": 0.9973,
+        "probabilities": {
+          "LEFT": 0.9973,
+          "CENTER": 0.001,
+          "RIGHT": 0.001,
+          "NONE": 0.0007
+        },
+        "answer": "LEFT"
+      }
+    },
+    {
+      "scene_id": "validation-00131",
+      "instruction": "가장 큰 홀수를 찾아. 없으면 NONE을 선택해.",
+      "gold": "CENTER",
+      "prediction": {
+        "type": "choice",
+        "choice": "CENTER",
+        "confidence": 0.9997,
+        "probabilities": {
+          "LEFT": 0.0001,
+          "CENTER": 0.9997,
+          "RIGHT": 0.0001,
+          "NONE": 0.0001
+        },
+        "answer": "CENTER"
+      }
+    },
+    {
+      "scene_id": "validation-00036",
+      "instruction": "Pick the odd digit in a red box, or choose NONE if there is none.",
+      "gold": "LEFT",
+      "prediction": {
+        "type": "choice",
+        "choice": "LEFT",
+        "confidence": 0.9997,
+        "probabilities": {
+          "LEFT": 0.9997,
+          "CENTER": 0.0001,
+          "RIGHT": 0.0001,
+          "NONE": 0.0001
+        },
+        "answer": "LEFT"
+      }
+    },
+    {
+      "scene_id": "validation-00020",
+      "instruction": "가장 작은 짝수를 찾아. 없으면 NONE을 선택해.",
+      "gold": "CENTER",
+      "prediction": {
+        "type": "choice",
+        "choice": "CENTER",
+        "confidence": 0.9994,
+        "probabilities": {
+          "LEFT": 0.0002,
+          "CENTER": 0.9994,
+          "RIGHT": 0.0002,
+          "NONE": 0.0002
+        },
+        "answer": "CENTER"
+      }
+    },
+    {
+      "scene_id": "validation-00096",
+      "instruction": "Pick the smallest even digit in a blue box, or choose NONE if there is none.",
+      "gold": "LEFT",
+      "prediction": {
+        "type": "choice",
+        "choice": "LEFT",
+        "confidence": 0.9995,
+        "probabilities": {
+          "LEFT": 0.9995,
+          "CENTER": 0.0002,
+          "RIGHT": 0.0002,
+          "NONE": 0.0001
+        },
+        "answer": "LEFT"
+      }
+    },
+    {
+      "scene_id": "validation-00079",
+      "instruction": "파란 상자에 있는 가장 큰 짝수를 골라.",
+      "gold": "LEFT",
+      "prediction": {
+        "type": "choice",
+        "choice": "LEFT",
+        "confidence": 0.9994,
+        "probabilities": {
+          "LEFT": 0.9994,
+          "CENTER": 0.0002,
+          "RIGHT": 0.0002,
+          "NONE": 0.0002
+        },
+        "answer": "LEFT"
+      }
+    },
+    {
+      "scene_id": "validation-00069",
+      "instruction": "Choose the smallest even digit.",
+      "gold": "RIGHT",
+      "prediction": {
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 0.9995,
+        "probabilities": {
+          "LEFT": 0.0002,
+          "CENTER": 0.0002,
+          "RIGHT": 0.9995,
+          "NONE": 0.0001
+        },
+        "answer": "RIGHT"
+      }
+    },
+    {
+      "scene_id": "validation-00021",
+      "instruction": "빨간 상자에 있는 가장 큰 숫자를 골라.",
+      "gold": "NONE",
+      "prediction": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.9997,
+        "probabilities": {
+          "LEFT": 0.0001,
+          "CENTER": 0.0001,
+          "RIGHT": 0.0001,
+          "NONE": 0.9997
+        },
+        "answer": "NONE"
+      }
+    },
+    {
+      "scene_id": "validation-00096",
+      "instruction": "Choose the smallest digit in a blue box.",
+      "gold": "LEFT",
+      "prediction": {
+        "type": "choice",
+        "choice": "LEFT",
+        "confidence": 0.9995,
+        "probabilities": {
+          "LEFT": 0.9995,
+          "CENTER": 0.0002,
+          "RIGHT": 0.0002,
+          "NONE": 0.0001
+        },
+        "answer": "LEFT"
+      }
+    },
+    {
+      "scene_id": "validation-00000",
+      "instruction": "Choose the odd digit in a red box.",
+      "gold": "LEFT",
+      "prediction": {
+        "type": "choice",
+        "choice": "LEFT",
+        "confidence": 0.9992,
+        "probabilities": {
+          "LEFT": 0.9992,
+          "CENTER": 0.0002,
+          "RIGHT": 0.0003,
+          "NONE": 0.0003
+        },
+        "answer": "LEFT"
+      }
+    },
+    {
+      "scene_id": "validation-00120",
+      "instruction": "Choose the odd digit in a blue box.",
+      "gold": "RIGHT",
+      "prediction": {
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 0.9995,
+        "probabilities": {
+          "LEFT": 0.0002,
+          "CENTER": 0.0002,
+          "RIGHT": 0.9995,
+          "NONE": 0.0001
+        },
+        "answer": "RIGHT"
+      }
+    },
+    {
+      "scene_id": "validation-00035",
+      "instruction": "Pick the even digit, or choose NONE if there is none.",
+      "gold": "CENTER",
+      "prediction": {
+        "type": "choice",
+        "choice": "CENTER",
+        "confidence": 0.9992,
+        "probabilities": {
+          "LEFT": 0.0002,
+          "CENTER": 0.9992,
+          "RIGHT": 0.0003,
+          "NONE": 0.0003
+        },
+        "answer": "CENTER"
+      }
+    },
+    {
+      "scene_id": "validation-00002",
+      "instruction": "파란 상자에 있는 숫자를 선택해 줘.",
+      "gold": "NONE",
+      "prediction": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.9997,
+        "probabilities": {
+          "LEFT": 0.0001,
+          "CENTER": 0.0001,
+          "RIGHT": 0.0001,
+          "NONE": 0.9997
+        },
+        "answer": "NONE"
+      }
+    },
+    {
+      "scene_id": "validation-00050",
+      "instruction": "Choose the smallest odd digit in a red box.",
+      "gold": "NONE",
+      "prediction": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.9995,
+        "probabilities": {
+          "LEFT": 0.0001,
+          "CENTER": 0.0002,
+          "RIGHT": 0.0002,
+          "NONE": 0.9995
+        },
+        "answer": "NONE"
+      }
+    },
+    {
+      "scene_id": "validation-00048",
+      "instruction": "Choose the largest digit in a blue box.",
+      "gold": "NONE",
+      "prediction": {
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.9997,
+        "probabilities": {
+          "LEFT": 0.0001,
+          "CENTER": 0.0001,
+          "RIGHT": 0.0001,
+          "NONE": 0.9997
+        },
+        "answer": "NONE"
+      }
+    }
+  ],
+  "weight_sha256": {
+    "adapter_model.safetensors": "5a9c02a2e19b4489f1de06072df6f0ae0ece1f3ed34b106dc3aa95945afcd3f0",
+    "joint_head.safetensors": "fcae47daa41de0b24bff421222607b15057337cc98037db32d510b780bad8b5e"
+  },
+  "temperature_scope": "Before external calibration; saved internal temperatures are one."
+}

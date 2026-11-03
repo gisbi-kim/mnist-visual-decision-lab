@@ -1,0 +1,3938 @@
+{
+  "device": "cuda",
+  "dtype": "torch.bfloat16",
+  "canonical": [
+    {
+      "instruction": "빨간 상자에 있는 홀수를 골라.",
+      "gold": "LEFT",
+      "language": "ko",
+      "prediction": {
+        "action": "LEFT",
+        "probabilities": {
+          "LEFT": 0.9816972613334656,
+          "CENTER": 0.006203511264175177,
+          "RIGHT": 0.006432014517486095,
+          "NONE": 0.005667135119438171
+        },
+        "latency_ms": 500.353200128302,
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "cpu_fallback_enabled": false
+      }
+    },
+    {
+      "instruction": "Choose the odd digit in a red box.",
+      "gold": "LEFT",
+      "language": "en",
+      "prediction": {
+        "action": "LEFT",
+        "probabilities": {
+          "LEFT": 0.9828453660011292,
+          "CENTER": 0.005777315236628056,
+          "RIGHT": 0.006099448539316654,
+          "NONE": 0.0052777924574911594
+        },
+        "latency_ms": 73.48749996162951,
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "cpu_fallback_enabled": false
+      }
+    },
+    {
+      "instruction": "가장 작은 홀수를 골라.",
+      "gold": "RIGHT",
+      "language": "ko",
+      "prediction": {
+        "action": "LEFT",
+        "probabilities": {
+          "LEFT": 0.982492208480835,
+          "CENTER": 0.0061526428908109665,
+          "RIGHT": 0.005934060551226139,
+          "NONE": 0.005420986097306013
+        },
+        "latency_ms": 71.83979987166822,
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "cpu_fallback_enabled": false
+      }
+    },
+    {
+      "instruction": "Choose the smallest odd digit.",
+      "gold": "RIGHT",
+      "language": "en",
+      "prediction": {
+        "action": "LEFT",
+        "probabilities": {
+          "LEFT": 0.9824454188346863,
+          "CENTER": 0.005987685173749924,
+          "RIGHT": 0.006096966098994017,
+          "NONE": 0.005469969939440489
+        },
+        "latency_ms": 71.31160004064441,
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "cpu_fallback_enabled": false
+      }
+    },
+    {
+      "instruction": "짝수를 골라.",
+      "gold": "CENTER",
+      "language": "ko",
+      "prediction": {
+        "action": "CENTER",
+        "probabilities": {
+          "LEFT": 0.007272644899785519,
+          "CENTER": 0.9780013561248779,
+          "RIGHT": 0.007960980758070946,
+          "NONE": 0.006765087600797415
+        },
+        "latency_ms": 71.36060018092394,
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "cpu_fallback_enabled": false
+      }
+    },
+    {
+      "instruction": "Choose the even digit.",
+      "gold": "CENTER",
+      "language": "en",
+      "prediction": {
+        "action": "CENTER",
+        "probabilities": {
+          "LEFT": 0.05092516914010048,
+          "CENTER": 0.7370162010192871,
+          "RIGHT": 0.1620461493730545,
+          "NONE": 0.05001239478588104
+        },
+        "latency_ms": 71.3178999722004,
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "cpu_fallback_enabled": false
+      }
+    },
+    {
+      "instruction": "파란 상자에 있는 짝수를 골라.",
+      "gold": "NONE",
+      "language": "ko",
+      "prediction": {
+        "action": "RIGHT",
+        "probabilities": {
+          "LEFT": 0.0070284041576087475,
+          "CENTER": 0.0070284041576087475,
+          "RIGHT": 0.9799705743789673,
+          "NONE": 0.005972601938992739
+        },
+        "latency_ms": 70.38299995474517,
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "cpu_fallback_enabled": false
+      }
+    },
+    {
+      "instruction": "Choose the even digit in a blue box.",
+      "gold": "NONE",
+      "language": "en",
+      "prediction": {
+        "action": "RIGHT",
+        "probabilities": {
+          "LEFT": 0.005833562929183245,
+          "CENTER": 0.005729003343731165,
+          "RIGHT": 0.9834801554679871,
+          "NONE": 0.004957249388098717
+        },
+        "latency_ms": 70.22470002993941,
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "cpu_fallback_enabled": false
+      }
+    }
+  ],
+  "ablations": [
+    {
+      "scene_id": "test_id-00101",
+      "instruction": "Find the largest odd digit in a blue box. Which position is it in?",
+      "gold": "LEFT",
+      "predictions": {
+        "normal": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9849154949188232,
+            "CENTER": 0.005055090878158808,
+            "RIGHT": 0.005241292994469404,
+            "NONE": 0.004788115620613098
+          },
+          "latency_ms": 70.55069995112717,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.00801169779151678,
+            "CENTER": 0.008458416908979416,
+            "RIGHT": 0.00815791916102171,
+            "NONE": 0.9753718972206116
+          },
+          "latency_ms": 69.79500013403594,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.006429794244468212,
+            "CENTER": 0.9813578724861145,
+            "RIGHT": 0.00654714135453105,
+            "NONE": 0.005665176082402468
+          },
+          "latency_ms": 69.6817000862211,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.3536703884601593,
+            "CENTER": 0.32898762822151184,
+            "RIGHT": 0.1715565174818039,
+            "NONE": 0.14578546583652496
+          },
+          "latency_ms": 69.04979981482029,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00145",
+      "instruction": "Pick the smallest odd digit, or choose NONE if there is none.",
+      "gold": "LEFT",
+      "predictions": {
+        "normal": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9759361147880554,
+            "CENTER": 0.009780893102288246,
+            "RIGHT": 0.007592965383082628,
+            "NONE": 0.00669002765789628
+          },
+          "latency_ms": 69.34739998541772,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.2585003972053528,
+            "CENTER": 0.1768116056919098,
+            "RIGHT": 0.1833244264125824,
+            "NONE": 0.38136354088783264
+          },
+          "latency_ms": 70.56739996187389,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.005932606291025877,
+            "CENTER": 0.9822508692741394,
+            "RIGHT": 0.006494104862213135,
+            "NONE": 0.0053225127048790455
+          },
+          "latency_ms": 69.87219979055226,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.20990490913391113,
+            "CENTER": 0.42497092485427856,
+            "RIGHT": 0.2339652180671692,
+            "NONE": 0.1311590075492859
+          },
+          "latency_ms": 69.95220016688108,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00168",
+      "instruction": "빨간 상자에 있는 가장 작은 숫자는 어느 위치에 있어?",
+      "gold": "NONE",
+      "predictions": {
+        "normal": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.004461994394659996,
+            "CENTER": 0.004461994394659996,
+            "RIGHT": 0.004382018465548754,
+            "NONE": 0.9866939783096313
+          },
+          "latency_ms": 70.25579991750419,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.00523480074480176,
+            "CENTER": 0.00523480074480176,
+            "RIGHT": 0.00583484023809433,
+            "NONE": 0.9836955070495605
+          },
+          "latency_ms": 69.96389990672469,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.006440519820898771,
+            "CENTER": 0.982995331287384,
+            "RIGHT": 0.0054730321280658245,
+            "NONE": 0.005091067403554916
+          },
+          "latency_ms": 69.4140000268817,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.31892549991607666,
+            "CENTER": 0.33067306876182556,
+            "RIGHT": 0.23030485212802887,
+            "NONE": 0.1200966164469719
+          },
+          "latency_ms": 70.21440006792545,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00072",
+      "instruction": "Select the smallest digit in a red box.",
+      "gold": "CENTER",
+      "predictions": {
+        "normal": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.005678411107510328,
+            "CENTER": 0.9836505055427551,
+            "RIGHT": 0.005576634779572487,
+            "NONE": 0.005094460677355528
+          },
+          "latency_ms": 69.85790003091097,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.00528216827660799,
+            "CENTER": 0.005378573201596737,
+            "RIGHT": 0.005678470246493816,
+            "NONE": 0.9836607575416565
+          },
+          "latency_ms": 69.97209996916354,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.004834879655390978,
+            "CENTER": 0.004834879655390978,
+            "RIGHT": 0.004748220089823008,
+            "NONE": 0.9855820536613464
+          },
+          "latency_ms": 69.70630004070699,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.20957183837890625,
+            "CENTER": 0.3841211497783661,
+            "RIGHT": 0.30090442299842834,
+            "NONE": 0.10540252923965454
+          },
+          "latency_ms": 70.16050000675023,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00121",
+      "instruction": "Choose the largest odd digit in a blue box.",
+      "gold": "RIGHT",
+      "predictions": {
+        "normal": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.005529880523681641,
+            "CENTER": 0.005333423614501953,
+            "RIGHT": 0.9842644333839417,
+            "NONE": 0.004872278310358524
+          },
+          "latency_ms": 70.98620012402534,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.00701827323064208,
+            "CENTER": 0.007276788353919983,
+            "RIGHT": 0.007146363612264395,
+            "NONE": 0.9785585403442383
+          },
+          "latency_ms": 70.56930009275675,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.008303122594952583,
+            "CENTER": 0.008454663679003716,
+            "RIGHT": 0.008303122594952583,
+            "NONE": 0.9749391078948975
+          },
+          "latency_ms": 69.92870010435581,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.20080368220806122,
+            "CENTER": 0.2730883061885834,
+            "RIGHT": 0.4028848707675934,
+            "NONE": 0.1232232078909874
+          },
+          "latency_ms": 71.02590007707477,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00175",
+      "instruction": "가장 큰 홀수를 선택해 줘.",
+      "gold": "RIGHT",
+      "predictions": {
+        "normal": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.0050111874006688595,
+            "CENTER": 0.0050111874006688595,
+            "RIGHT": 0.9852310419082642,
+            "NONE": 0.004746529273688793
+          },
+          "latency_ms": 70.53469982929528,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.3209961950778961,
+            "CENTER": 0.18827110528945923,
+            "RIGHT": 0.17832794785499573,
+            "NONE": 0.3124048113822937
+          },
+          "latency_ms": 69.88080008886755,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.005726810544729233,
+            "CENTER": 0.005937757436186075,
+            "RIGHT": 0.9831037521362305,
+            "NONE": 0.0052316514775156975
+          },
+          "latency_ms": 69.89649985916913,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.30513083934783936,
+            "CENTER": 0.3656233847141266,
+            "RIGHT": 0.18388745188713074,
+            "NONE": 0.14535833895206451
+          },
+          "latency_ms": 70.80040010623634,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00134",
+      "instruction": "Pick the smallest digit in a red box, or choose NONE if there is none.",
+      "gold": "CENTER",
+      "predictions": {
+        "normal": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.005433220416307449,
+            "CENTER": 0.9847095608711243,
+            "RIGHT": 0.005240196827799082,
+            "NONE": 0.004617045633494854
+          },
+          "latency_ms": 69.06170002184808,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.005623131990432739,
+            "CENTER": 0.005623131990432739,
+            "RIGHT": 0.0058302609249949455,
+            "NONE": 0.9829234480857849
+          },
+          "latency_ms": 69.80019994080067,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.005676717031747103,
+            "CENTER": 0.9833570718765259,
+            "RIGHT": 0.005780322942882776,
+            "NONE": 0.005185892339795828
+          },
+          "latency_ms": 67.54640000872314,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.16334065794944763,
+            "CENTER": 0.25212109088897705,
+            "RIGHT": 0.4748174250125885,
+            "NONE": 0.10972081124782562
+          },
+          "latency_ms": 76.67550002224743,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00131",
+      "instruction": "Pick the largest digit in a blue box, or choose NONE if there is none.",
+      "gold": "LEFT",
+      "predictions": {
+        "normal": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9808391332626343,
+            "CENTER": 0.006723637692630291,
+            "RIGHT": 0.006723637692630291,
+            "NONE": 0.0057136183604598045
+          },
+          "latency_ms": 70.2311999630183,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.0065382495522499084,
+            "CENTER": 0.00677908631041646,
+            "RIGHT": 0.006657579448074102,
+            "NONE": 0.9800251126289368
+          },
+          "latency_ms": 71.15390012040734,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.006206297315657139,
+            "CENTER": 0.9821381568908691,
+            "RIGHT": 0.005985812284052372,
+            "NONE": 0.0056696804240345955
+          },
+          "latency_ms": 69.86869988031685,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.3022218346595764,
+            "CENTER": 0.3248964548110962,
+            "RIGHT": 0.22628161311149597,
+            "NONE": 0.146600142121315
+          },
+          "latency_ms": 69.58749983459711,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00023",
+      "instruction": "Select the odd digit in a red box.",
+      "gold": "LEFT",
+      "predictions": {
+        "normal": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9823729991912842,
+            "CENTER": 0.006151896435767412,
+            "RIGHT": 0.006151896435767412,
+            "NONE": 0.005323174875229597
+          },
+          "latency_ms": 69.74970013834536,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.0058205025270581245,
+            "CENTER": 0.005926729179918766,
+            "RIGHT": 0.006974422372877598,
+            "NONE": 0.9812783598899841
+          },
+          "latency_ms": 70.26720000430942,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9821673631668091,
+            "CENTER": 0.006262862589210272,
+            "RIGHT": 0.006150608416646719,
+            "NONE": 0.005419193301349878
+          },
+          "latency_ms": 69.50490013696253,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.261673241853714,
+            "CENTER": 0.41127175092697144,
+            "RIGHT": 0.1855745017528534,
+            "NONE": 0.1414804756641388
+          },
+          "latency_ms": 69.72389994189143,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00059",
+      "instruction": "Find the odd digit in a blue box. Which position is it in?",
+      "gold": "NONE",
+      "predictions": {
+        "normal": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.006961690727621317,
+            "CENTER": 0.006836910266429186,
+            "RIGHT": 0.006714369170367718,
+            "NONE": 0.9794870018959045
+          },
+          "latency_ms": 69.8811998590827,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.006714369170367718,
+            "CENTER": 0.006961690727621317,
+            "RIGHT": 0.006836913526058197,
+            "NONE": 0.9794870018959045
+          },
+          "latency_ms": 69.13079996593297,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.006716839037835598,
+            "CENTER": 0.006839428097009659,
+            "RIGHT": 0.00659644789993763,
+            "NONE": 0.9798473119735718
+          },
+          "latency_ms": 69.7041000239551,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.3387010097503662,
+            "CENTER": 0.32666826248168945,
+            "RIGHT": 0.18987305462360382,
+            "NONE": 0.14475767314434052
+          },
+          "latency_ms": 68.74509993940592,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00023",
+      "instruction": "빨간 상자에 있는 가장 큰 홀수를 찾아. 없으면 NONE을 선택해.",
+      "gold": "LEFT",
+      "predictions": {
+        "normal": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.981340229511261,
+            "CENTER": 0.006666513625532389,
+            "RIGHT": 0.006429675500839949,
+            "NONE": 0.005563533864915371
+          },
+          "latency_ms": 69.59580001421273,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.005426119547337294,
+            "CENTER": 0.005525151267647743,
+            "RIGHT": 0.0056259906850755215,
+            "NONE": 0.9834226369857788
+          },
+          "latency_ms": 69.60680009797215,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.005192864220589399,
+            "CENTER": 0.9846790432929993,
+            "RIGHT": 0.0053841411136090755,
+            "NONE": 0.004743872210383415
+          },
+          "latency_ms": 69.76899993605912,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.261673241853714,
+            "CENTER": 0.41127175092697144,
+            "RIGHT": 0.1855745017528534,
+            "NONE": 0.1414804756641388
+          },
+          "latency_ms": 69.98439994640648,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00144",
+      "instruction": "Choose the smallest odd digit.",
+      "gold": "RIGHT",
+      "predictions": {
+        "normal": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.006097561214119196,
+            "CENTER": 0.0059882719069719315,
+            "RIGHT": 0.9825416803359985,
+            "NONE": 0.005372453946620226
+          },
+          "latency_ms": 69.83920000493526,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.26486796140670776,
+            "CENTER": 0.20011527836322784,
+            "RIGHT": 0.23978838324546814,
+            "NONE": 0.29522839188575745
+          },
+          "latency_ms": 69.03990008868277,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.10414252430200577,
+            "CENTER": 0.028576625511050224,
+            "RIGHT": 0.8392164707183838,
+            "NONE": 0.0280644241720438
+          },
+          "latency_ms": 70.43289998546243,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.17687323689460754,
+            "CENTER": 0.50493985414505,
+            "RIGHT": 0.23837797343730927,
+            "NONE": 0.07980893552303314
+          },
+          "latency_ms": 70.82929997704923,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00147",
+      "instruction": "파란 상자에 있는 홀수는 어느 위치에 있어?",
+      "gold": "RIGHT",
+      "predictions": {
+        "normal": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.007176101673394442,
+            "CENTER": 0.005372940097004175,
+            "RIGHT": 0.9826305508613586,
+            "NONE": 0.004820403177291155
+          },
+          "latency_ms": 70.34730003215373,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.009711341932415962,
+            "CENTER": 0.011223222129046917,
+            "RIGHT": 0.01006905548274517,
+            "NONE": 0.9689963459968567
+          },
+          "latency_ms": 70.19989984109998,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.006542728748172522,
+            "CENTER": 0.00678373035043478,
+            "RIGHT": 0.9806964993476868,
+            "NONE": 0.005977025721222162
+          },
+          "latency_ms": 69.25510009750724,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.1781332641839981,
+            "CENTER": 0.11030451208353043,
+            "RIGHT": 0.6550729274749756,
+            "NONE": 0.05648929253220558
+          },
+          "latency_ms": 69.27209999412298,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00017",
+      "instruction": "짝수는 어느 위치에 있어?",
+      "gold": "NONE",
+      "predictions": {
+        "normal": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.00659644789993763,
+            "CENTER": 0.006716839037835598,
+            "RIGHT": 0.006839424837380648,
+            "NONE": 0.9798473119735718
+          },
+          "latency_ms": 70.14039997011423,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.32705801725387573,
+            "CENTER": 0.4407869577407837,
+            "RIGHT": 0.12654604017734528,
+            "NONE": 0.10560895502567291
+          },
+          "latency_ms": 70.60069986619055,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.006856131367385387,
+            "CENTER": 0.9646351337432861,
+            "RIGHT": 0.02201470360159874,
+            "NONE": 0.0064940378069877625
+          },
+          "latency_ms": 69.61030000820756,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.2608332931995392,
+            "CENTER": 0.33599284291267395,
+            "RIGHT": 0.2515668570995331,
+            "NONE": 0.15160705149173737
+          },
+          "latency_ms": 70.26720000430942,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00135",
+      "instruction": "가장 큰 짝수는 어느 위치에 있어?",
+      "gold": "RIGHT",
+      "predictions": {
+        "normal": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.006364139728248119,
+            "CENTER": 0.007765014655888081,
+            "RIGHT": 0.9801611304283142,
+            "NONE": 0.005709669087082148
+          },
+          "latency_ms": 70.21540007553995,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.3166029453277588,
+            "CENTER": 0.2892284691333771,
+            "RIGHT": 0.22452986240386963,
+            "NONE": 0.16963869333267212
+          },
+          "latency_ms": 70.9396000020206,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.22543182969093323,
+            "CENTER": 0.7012986540794373,
+            "RIGHT": 0.037959352135658264,
+            "NONE": 0.03531015291810036
+          },
+          "latency_ms": 70.10549982078373,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.3865991532802582,
+            "CENTER": 0.2668319046497345,
+            "RIGHT": 0.21477331221103668,
+            "NONE": 0.13179565966129303
+          },
+          "latency_ms": 68.63720016553998,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00030",
+      "instruction": "빨간 상자에 있는 가장 큰 숫자를 선택해 줘.",
+      "gold": "CENTER",
+      "predictions": {
+        "normal": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.005528303328901529,
+            "CENTER": 0.9839836359024048,
+            "RIGHT": 0.005528303328901529,
+            "NONE": 0.004959787242114544
+          },
+          "latency_ms": 69.77339996956289,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.0051409099251031876,
+            "CENTER": 0.005234734155237675,
+            "RIGHT": 0.0059412564150989056,
+            "NONE": 0.9836830496788025
+          },
+          "latency_ms": 68.91060015186667,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.0046655056066811085,
+            "CENTER": 0.0046655056066811085,
+            "RIGHT": 0.004581884481012821,
+            "NONE": 0.9860871434211731
+          },
+          "latency_ms": 68.46600002609193,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.24591629207134247,
+            "CENTER": 0.3000474274158478,
+            "RIGHT": 0.3110996186733246,
+            "NONE": 0.14293669164180756
+          },
+          "latency_ms": 70.5741997808218,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00116",
+      "instruction": "Choose the odd digit in a red box.",
+      "gold": "NONE",
+      "predictions": {
+        "normal": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.005380705464631319,
+            "CENTER": 0.005284265149384737,
+            "RIGHT": 0.005284265149384737,
+            "NONE": 0.9840508103370667
+          },
+          "latency_ms": 69.10209986381233,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.006085249595344067,
+            "CENTER": 0.0061963084153831005,
+            "RIGHT": 0.007160961627960205,
+            "NONE": 0.9805574417114258
+          },
+          "latency_ms": 69.13649989292026,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.06817195564508438,
+            "CENTER": 0.06817195564508438,
+            "RIGHT": 0.08022300153970718,
+            "NONE": 0.7834330797195435
+          },
+          "latency_ms": 69.38420003280044,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.28331008553504944,
+            "CENTER": 0.2884806990623474,
+            "RIGHT": 0.26353779435157776,
+            "NONE": 0.16467149555683136
+          },
+          "latency_ms": 69.78500005789101,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00156",
+      "instruction": "파란 상자에 있는 가장 작은 짝수는 어느 위치에 있어?",
+      "gold": "CENTER",
+      "predictions": {
+        "normal": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.006092998199164867,
+            "CENTER": 0.9818063974380493,
+            "RIGHT": 0.006432733032852411,
+            "NONE": 0.005667765159159899
+          },
+          "latency_ms": 69.15650004521012,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.03152081370353699,
+            "CENTER": 0.03916109725832939,
+            "RIGHT": 0.03450414910912514,
+            "NONE": 0.8948139548301697
+          },
+          "latency_ms": 71.03540003299713,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.005055140238255262,
+            "CENTER": 0.005055140238255262,
+            "RIGHT": 0.004964532796293497,
+            "NONE": 0.9849250912666321
+          },
+          "latency_ms": 69.37360018491745,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.34899085760116577,
+            "CENTER": 0.34899085760116577,
+            "RIGHT": 0.16327248513698578,
+            "NONE": 0.13874585926532745
+          },
+          "latency_ms": 69.19530010782182,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00061",
+      "instruction": "빨간 상자에 있는 가장 큰 숫자를 선택해 줘.",
+      "gold": "RIGHT",
+      "predictions": {
+        "normal": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.005575974937528372,
+            "CENTER": 0.0058868820779025555,
+            "RIGHT": 0.9835346341133118,
+            "NONE": 0.005002558697015047
+          },
+          "latency_ms": 69.09470004029572,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.0051409099251031876,
+            "CENTER": 0.005234734155237675,
+            "RIGHT": 0.0059412564150989056,
+            "NONE": 0.9836830496788025
+          },
+          "latency_ms": 69.12369979545474,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9796825051307678,
+            "CENTER": 0.007691354025155306,
+            "RIGHT": 0.006655252538621426,
+            "NONE": 0.005970845930278301
+          },
+          "latency_ms": 69.90160001441836,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.18892738223075867,
+            "CENTER": 0.319215327501297,
+            "RIGHT": 0.3370140790939331,
+            "NONE": 0.1548432558774948
+          },
+          "latency_ms": 70.18649997189641,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00052",
+      "instruction": "빨간 상자에 있는 홀수를 찾아. 없으면 NONE을 선택해.",
+      "gold": "LEFT",
+      "predictions": {
+        "normal": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.981307864189148,
+            "CENTER": 0.0064878701232373714,
+            "RIGHT": 0.0064878701232373714,
+            "NONE": 0.005716348998248577
+          },
+          "latency_ms": 69.71339997835457,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.005878592375665903,
+            "CENTER": 0.0059858825989067554,
+            "RIGHT": 0.0059858825989067554,
+            "NONE": 0.9821496605873108
+          },
+          "latency_ms": 70.2543999068439,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.005381159950047731,
+            "CENTER": 0.005479371175169945,
+            "RIGHT": 0.9841338992118835,
+            "NONE": 0.005005607381463051
+          },
+          "latency_ms": 70.64500008709729,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.32136183977127075,
+            "CENTER": 0.29893389344215393,
+            "RIGHT": 0.22381983697414398,
+            "NONE": 0.15588445961475372
+          },
+          "latency_ms": 70.60179999098182,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00177",
+      "instruction": "파란 상자에 있는 가장 큰 숫자는 어느 위치에 있어?",
+      "gold": "NONE",
+      "predictions": {
+        "normal": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.004966751206666231,
+            "CENTER": 0.004877729807049036,
+            "RIGHT": 0.004790301434695721,
+            "NONE": 0.9853652119636536
+          },
+          "latency_ms": 69.61340014822781,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.039937298744916916,
+            "CENTER": 0.04371722415089607,
+            "RIGHT": 0.042164117097854614,
+            "NONE": 0.87418133020401
+          },
+          "latency_ms": 71.11599994823337,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.0066641247831285,
+            "CENTER": 0.006785750854760408,
+            "RIGHT": 0.9809885621070862,
+            "NONE": 0.0055615403689444065
+          },
+          "latency_ms": 70.2551999129355,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.29399657249450684,
+            "CENTER": 0.35228174924850464,
+            "RIGHT": 0.21617773175239563,
+            "NONE": 0.13754387199878693
+          },
+          "latency_ms": 70.70269994437695,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00005",
+      "instruction": "가장 작은 짝수는 어느 위치에 있어?",
+      "gold": "NONE",
+      "predictions": {
+        "normal": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.007143568713217974,
+            "CENTER": 0.007406698539853096,
+            "RIGHT": 0.007273945491760969,
+            "NONE": 0.9781758189201355
+          },
+          "latency_ms": 71.2081000674516,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.4196082353591919,
+            "CENTER": 0.19989310204982758,
+            "RIGHT": 0.2621920704841614,
+            "NONE": 0.11830662935972214
+          },
+          "latency_ms": 71.08060014434159,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.018098944798111916,
+            "CENTER": 0.9459923505783081,
+            "RIGHT": 0.018765615299344063,
+            "NONE": 0.017143085598945618
+          },
+          "latency_ms": 70.61320007778704,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.2731860876083374,
+            "CENTER": 0.4293665885925293,
+            "RIGHT": 0.1868564635515213,
+            "NONE": 0.110590860247612
+          },
+          "latency_ms": 69.32629994116724,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00101",
+      "instruction": "Select the digit in a red box.",
+      "gold": "RIGHT",
+      "predictions": {
+        "normal": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.006045318208634853,
+            "CENTER": 0.005936962552368641,
+            "RIGHT": 0.9829726219177246,
+            "NONE": 0.0050451192073524
+          },
+          "latency_ms": 69.58320015110075,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.0053270719945430756,
+            "CENTER": 0.005424296483397484,
+            "RIGHT": 0.006156400311738253,
+            "NONE": 0.9830922484397888
+          },
+          "latency_ms": 69.6427000220865,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.11145047098398209,
+            "CENTER": 0.17047840356826782,
+            "RIGHT": 0.6588925123214722,
+            "NONE": 0.05917855352163315
+          },
+          "latency_ms": 69.15339990518987,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.3536703884601593,
+            "CENTER": 0.32898762822151184,
+            "RIGHT": 0.1715565174818039,
+            "NONE": 0.14578546583652496
+          },
+          "latency_ms": 70.80430001951754,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00080",
+      "instruction": "가장 큰 짝수를 찾아. 없으면 NONE을 선택해.",
+      "gold": "CENTER",
+      "predictions": {
+        "normal": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.005477275233715773,
+            "CENTER": 0.9837574362754822,
+            "RIGHT": 0.005577240604907274,
+            "NONE": 0.005188003648072481
+          },
+          "latency_ms": 69.17619984596968,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.32546207308769226,
+            "CENTER": 0.23290933668613434,
+            "RIGHT": 0.28936389088630676,
+            "NONE": 0.1522647589445114
+          },
+          "latency_ms": 70.70530019700527,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9804806113243103,
+            "CENTER": 0.006541288923472166,
+            "RIGHT": 0.0067822374403476715,
+            "NONE": 0.006195823196321726
+          },
+          "latency_ms": 70.08489989675581,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.2354053109884262,
+            "CENTER": 0.37673911452293396,
+            "RIGHT": 0.2485310584306717,
+            "NONE": 0.13932451605796814
+          },
+          "latency_ms": 70.11279999278486,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00031",
+      "instruction": "가장 큰 숫자는 어느 위치에 있어?",
+      "gold": "RIGHT",
+      "predictions": {
+        "normal": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.005877893418073654,
+            "CENTER": 0.015750978142023087,
+            "RIGHT": 0.9731921553611755,
+            "NONE": 0.005178906489163637
+          },
+          "latency_ms": 70.49569999799132,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.3146018385887146,
+            "CENTER": 0.32034364342689514,
+            "RIGHT": 0.21518440544605255,
+            "NONE": 0.1498701125383377
+          },
+          "latency_ms": 69.91039984859526,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9793190360069275,
+            "CENTER": 0.008726198226213455,
+            "RIGHT": 0.006301428657025099,
+            "NONE": 0.005653406493365765
+          },
+          "latency_ms": 69.65270009823143,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.2153005450963974,
+            "CENTER": 0.4280819296836853,
+            "RIGHT": 0.2039298117160797,
+            "NONE": 0.15268772840499878
+          },
+          "latency_ms": 70.99470007233322,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00187",
+      "instruction": "빨간 상자에 있는 짝수를 선택해 줘.",
+      "gold": "RIGHT",
+      "predictions": {
+        "normal": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.006665055640041828,
+            "CENTER": 0.00654559163376689,
+            "RIGHT": 0.9811255931854248,
+            "NONE": 0.0056638349778950214
+          },
+          "latency_ms": 70.15389995649457,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.0064797168597579,
+            "CENTER": 0.0064797168597579,
+            "RIGHT": 0.00696586724370718,
+            "NONE": 0.9800746440887451
+          },
+          "latency_ms": 70.47319994308054,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.010801947675645351,
+            "CENTER": 0.011612378992140293,
+            "RIGHT": 0.010608334094285965,
+            "NONE": 0.9669773578643799
+          },
+          "latency_ms": 69.5526001509279,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.3796347975730896,
+            "CENTER": 0.34681034088134766,
+            "RIGHT": 0.1429576873779297,
+            "NONE": 0.13059714436531067
+          },
+          "latency_ms": 70.94849995337427,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00054",
+      "instruction": "Choose the even digit in a red box.",
+      "gold": "NONE",
+      "predictions": {
+        "normal": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.00727201160043478,
+            "CENTER": 0.0075398762710392475,
+            "RIGHT": 0.00727201160043478,
+            "NONE": 0.9779161810874939
+          },
+          "latency_ms": 70.2655001077801,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.006534057203680277,
+            "CENTER": 0.006653310731053352,
+            "RIGHT": 0.007415942847728729,
+            "NONE": 0.9793967008590698
+          },
+          "latency_ms": 70.33580006100237,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.007471519056707621,
+            "CENTER": 0.007337604183703661,
+            "RIGHT": 0.007337604183703661,
+            "NONE": 0.9778533577919006
+          },
+          "latency_ms": 70.19830006174743,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.21904420852661133,
+            "CENTER": 0.4394818842411041,
+            "RIGHT": 0.22304193675518036,
+            "NONE": 0.11843199282884598
+          },
+          "latency_ms": 70.40189998224378,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00023",
+      "instruction": "Pick the largest odd digit, or choose NONE if there is none.",
+      "gold": "LEFT",
+      "predictions": {
+        "normal": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9833658337593079,
+            "CENTER": 0.005676767323166132,
+            "RIGHT": 0.005676767323166132,
+            "NONE": 0.005280586890876293
+          },
+          "latency_ms": 71.23099989257753,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.2840542197227478,
+            "CENTER": 0.20327673852443695,
+            "RIGHT": 0.1960550844669342,
+            "NONE": 0.31661391258239746
+          },
+          "latency_ms": 70.96659997478127,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.005829993169754744,
+            "CENTER": 0.006155060604214668,
+            "RIGHT": 0.9828783273696899,
+            "NONE": 0.005136704538017511
+          },
+          "latency_ms": 70.94100001268089,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.261673241853714,
+            "CENTER": 0.41127175092697144,
+            "RIGHT": 0.1855745017528534,
+            "NONE": 0.1414804756641388
+          },
+          "latency_ms": 70.28270000591874,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00163",
+      "instruction": "Pick the even digit in a red box, or choose NONE if there is none.",
+      "gold": "LEFT",
+      "predictions": {
+        "normal": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9825968146324158,
+            "CENTER": 0.005828323308378458,
+            "RIGHT": 0.0061532980762422085,
+            "NONE": 0.005421563051640987
+          },
+          "latency_ms": 69.58340015262365,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.006537397392094135,
+            "CENTER": 0.006537397392094135,
+            "RIGHT": 0.007027878426015377,
+            "NONE": 0.9798973202705383
+          },
+          "latency_ms": 69.853900000453,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.005284772254526615,
+            "CENTER": 0.005284772254526615,
+            "RIGHT": 0.005284772254526615,
+            "NONE": 0.9841457009315491
+          },
+          "latency_ms": 70.5236999783665,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.2793389558792114,
+            "CENTER": 0.34704750776290894,
+            "RIGHT": 0.23312218487262726,
+            "NONE": 0.14049135148525238
+          },
+          "latency_ms": 69.35109989717603,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00121",
+      "instruction": "Choose the odd digit.",
+      "gold": "RIGHT",
+      "predictions": {
+        "normal": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.005528850480914116,
+            "CENTER": 0.005429752636700869,
+            "RIGHT": 0.9840810298919678,
+            "NONE": 0.004960278049111366
+          },
+          "latency_ms": 70.47750009223819,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.2348482459783554,
+            "CENTER": 0.22650499641895294,
+            "RIGHT": 0.18902964890003204,
+            "NONE": 0.349617063999176
+          },
+          "latency_ms": 70.17769990488887,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.005627552047371864,
+            "CENTER": 0.005627552047371864,
+            "RIGHT": 0.9836961030960083,
+            "NONE": 0.005048831924796104
+          },
+          "latency_ms": 70.74839994311333,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.20080368220806122,
+            "CENTER": 0.2730883061885834,
+            "RIGHT": 0.4028848707675934,
+            "NONE": 0.1232232078909874
+          },
+          "latency_ms": 69.06170002184808,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00083",
+      "instruction": "파란 상자에 있는 가장 큰 짝수는 어느 위치에 있어?",
+      "gold": "LEFT",
+      "predictions": {
+        "normal": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9811413288116455,
+            "CENTER": 0.006545696407556534,
+            "RIGHT": 0.006545696407556534,
+            "NONE": 0.005767298396676779
+          },
+          "latency_ms": 69.1164000891149,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.029877498745918274,
+            "CENTER": 0.03645413741469383,
+            "RIGHT": 0.03211910277605057,
+            "NONE": 0.9015493392944336
+          },
+          "latency_ms": 69.3589998409152,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.006041709799319506,
+            "CENTER": 0.006151976995170116,
+            "RIGHT": 0.9823859333992004,
+            "NONE": 0.005420399364084005
+          },
+          "latency_ms": 69.85320011153817,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.26528188586235046,
+            "CENTER": 0.24234473705291748,
+            "RIGHT": 0.32958316802978516,
+            "NONE": 0.1627902239561081
+          },
+          "latency_ms": 70.68259990774095,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00182",
+      "instruction": "파란 상자에 있는 가장 큰 홀수를 선택해 줘.",
+      "gold": "LEFT",
+      "predictions": {
+        "normal": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9792075753211975,
+            "CENTER": 0.007347766309976578,
+            "RIGHT": 0.007086725905537605,
+            "NONE": 0.006357948761433363
+          },
+          "latency_ms": 69.39710001461208,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.011169669218361378,
+            "CENTER": 0.012449988164007664,
+            "RIGHT": 0.01200768444687128,
+            "NONE": 0.9643726348876953
+          },
+          "latency_ms": 70.75190008617938,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.004921825602650642,
+            "CENTER": 0.004921825602650642,
+            "RIGHT": 0.004833607468754053,
+            "NONE": 0.9853227138519287
+          },
+          "latency_ms": 70.17139997333288,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.34792381525039673,
+            "CENTER": 0.3265821635723114,
+            "RIGHT": 0.1932874619960785,
+            "NONE": 0.13220658898353577
+          },
+          "latency_ms": 69.9545000679791,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00080",
+      "instruction": "빨간 상자에 있는 가장 큰 홀수는 어느 위치에 있어?",
+      "gold": "LEFT",
+      "predictions": {
+        "normal": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9817073941230774,
+            "CENTER": 0.0056161778047680855,
+            "RIGHT": 0.007637866772711277,
+            "NONE": 0.005038625095039606
+          },
+          "latency_ms": 72.11990002542734,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.005426119547337294,
+            "CENTER": 0.005525151267647743,
+            "RIGHT": 0.005625987891107798,
+            "NONE": 0.9834226369857788
+          },
+          "latency_ms": 70.84559998475015,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.005665454547852278,
+            "CENTER": 0.007845507934689522,
+            "RIGHT": 0.9814060926437378,
+            "NONE": 0.005082836840301752
+          },
+          "latency_ms": 70.35450008697808,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.2354053109884262,
+            "CENTER": 0.37673911452293396,
+            "RIGHT": 0.2485310584306717,
+            "NONE": 0.13932451605796814
+          },
+          "latency_ms": 69.87289991229773,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00072",
+      "instruction": "빨간 상자에 있는 가장 작은 짝수는 어느 위치에 있어?",
+      "gold": "LEFT",
+      "predictions": {
+        "normal": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9818201065063477,
+            "CENTER": 0.006204287521541119,
+            "RIGHT": 0.006204287521541119,
+            "NONE": 0.005771288648247719
+          },
+          "latency_ms": 69.10900003276765,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.006141838151961565,
+            "CENTER": 0.006368073169142008,
+            "RIGHT": 0.006723142694681883,
+            "NONE": 0.9807668924331665
+          },
+          "latency_ms": 70.32570010051131,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.005430235993117094,
+            "CENTER": 0.9841687083244324,
+            "RIGHT": 0.0055293426848948,
+            "NONE": 0.004871806595474482
+          },
+          "latency_ms": 69.81690018437803,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.20957183837890625,
+            "CENTER": 0.3841211497783661,
+            "RIGHT": 0.30090442299842834,
+            "NONE": 0.10540252923965454
+          },
+          "latency_ms": 70.28370001353323,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00062",
+      "instruction": "Pick the digit in a red box, or choose NONE if there is none.",
+      "gold": "CENTER",
+      "predictions": {
+        "normal": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.005239815916866064,
+            "CENTER": 0.9846379160881042,
+            "RIGHT": 0.0053354473784565926,
+            "NONE": 0.00478676613420248
+          },
+          "latency_ms": 69.67979995533824,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.005572779104113579,
+            "CENTER": 0.005572779104113579,
+            "RIGHT": 0.005883508361876011,
+            "NONE": 0.9829709529876709
+          },
+          "latency_ms": 69.86679998226464,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.5151008367538452,
+            "CENTER": 0.003055347129702568,
+            "RIGHT": 0.47915181517601013,
+            "NONE": 0.002692012581974268
+          },
+          "latency_ms": 71.8334000557661,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.2711474597454071,
+            "CENTER": 0.3368704915046692,
+            "RIGHT": 0.2760961651802063,
+            "NONE": 0.1158858984708786
+          },
+          "latency_ms": 71.96430000476539,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00081",
+      "instruction": "빨간 상자에 있는 가장 작은 홀수는 어느 위치에 있어?",
+      "gold": "RIGHT",
+      "predictions": {
+        "normal": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.01151949167251587,
+            "CENTER": 0.006341986358165741,
+            "RIGHT": 0.9767491817474365,
+            "NONE": 0.005389298312366009
+          },
+          "latency_ms": 69.60869999602437,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.00552348094061017,
+            "CENTER": 0.005624289624392986,
+            "RIGHT": 0.005726935807615519,
+            "NONE": 0.9831252694129944
+          },
+          "latency_ms": 69.90660005249083,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.006534925661981106,
+            "CENTER": 0.0072839888744056225,
+            "RIGHT": 0.0066541945561766624,
+            "NONE": 0.9795268177986145
+          },
+          "latency_ms": 69.92179993540049,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.225873664021492,
+            "CENTER": 0.5284944772720337,
+            "RIGHT": 0.14371293783187866,
+            "NONE": 0.10191895812749863
+          },
+          "latency_ms": 69.90620004944503,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00016",
+      "instruction": "Pick the largest even digit, or choose NONE if there is none.",
+      "gold": "RIGHT",
+      "predictions": {
+        "normal": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.006305907387286425,
+            "CENTER": 0.008122963830828667,
+            "RIGHT": 0.9800150990486145,
+            "NONE": 0.005556024145334959
+          },
+          "latency_ms": 69.16470010764897,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.32936087250709534,
+            "CENTER": 0.23357757925987244,
+            "RIGHT": 0.229390949010849,
+            "NONE": 0.20767056941986084
+          },
+          "latency_ms": 69.71210008487105,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.00701918825507164,
+            "CENTER": 0.007147295866161585,
+            "RIGHT": 0.007147295866161585,
+            "NONE": 0.9786862134933472
+          },
+          "latency_ms": 69.55050001852214,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.25362446904182434,
+            "CENTER": 0.33266937732696533,
+            "RIGHT": 0.24022969603538513,
+            "NONE": 0.1734764575958252
+          },
+          "latency_ms": 69.98329982161522,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00131",
+      "instruction": "파란 상자에 있는 짝수를 골라.",
+      "gold": "NONE",
+      "predictions": {
+        "normal": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.006897752173244953,
+            "CENTER": 0.006897752173244953,
+            "RIGHT": 0.006897752173244953,
+            "NONE": 0.9793068170547485
+          },
+          "latency_ms": 70.02829993143678,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.016022641211748123,
+            "CENTER": 0.01990634761750698,
+            "RIGHT": 0.017859233543276787,
+            "NONE": 0.9462117552757263
+          },
+          "latency_ms": 70.84220019169152,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.005526256747543812,
+            "CENTER": 0.005427205003798008,
+            "RIGHT": 0.005427205003798008,
+            "NONE": 0.9836193919181824
+          },
+          "latency_ms": 69.62940003722906,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.3022218346595764,
+            "CENTER": 0.3248964548110962,
+            "RIGHT": 0.22628161311149597,
+            "NONE": 0.146600142121315
+          },
+          "latency_ms": 70.75039995834231,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00126",
+      "instruction": "Pick the odd digit in a red box, or choose NONE if there is none.",
+      "gold": "CENTER",
+      "predictions": {
+        "normal": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.005100797396153212,
+            "CENTER": 0.9848740100860596,
+            "RIGHT": 0.0051938919350504875,
+            "NONE": 0.004831408616155386
+          },
+          "latency_ms": 69.62039996869862,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.00598255405202508,
+            "CENTER": 0.00598255405202508,
+            "RIGHT": 0.0064314003102481365,
+            "NONE": 0.9816035032272339
+          },
+          "latency_ms": 69.34519996866584,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.03805328160524368,
+            "CENTER": 0.005396042484790087,
+            "RIGHT": 0.951796293258667,
+            "NONE": 0.004754356574267149
+          },
+          "latency_ms": 70.1415000949055,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.25103726983070374,
+            "CENTER": 0.3571959435939789,
+            "RIGHT": 0.25103726983070374,
+            "NONE": 0.14072947204113007
+          },
+          "latency_ms": 68.91979998908937,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00138",
+      "instruction": "짝수를 선택해 줘.",
+      "gold": "NONE",
+      "predictions": {
+        "normal": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.006654330529272556,
+            "CENTER": 0.00689944252371788,
+            "RIGHT": 0.00689944252371788,
+            "NONE": 0.979546844959259
+          },
+          "latency_ms": 69.80710010975599,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.42930448055267334,
+            "CENTER": 0.3582758605480194,
+            "RIGHT": 0.11674033850431442,
+            "NONE": 0.09567935764789581
+          },
+          "latency_ms": 69.89810010418296,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9780158400535583,
+            "CENTER": 0.007540644612163305,
+            "RIGHT": 0.007678269408643246,
+            "NONE": 0.006765187717974186
+          },
+          "latency_ms": 69.94180008769035,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.16201014816761017,
+            "CENTER": 0.629000723361969,
+            "RIGHT": 0.13040216267108917,
+            "NONE": 0.07858700305223465
+          },
+          "latency_ms": 71.83609995990992,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00034",
+      "instruction": "Find the even digit in a blue box. Which position is it in?",
+      "gold": "LEFT",
+      "predictions": {
+        "normal": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9794609546661377,
+            "CENTER": 0.006961505394428968,
+            "RIGHT": 0.0072179329581558704,
+            "NONE": 0.006359593942761421
+          },
+          "latency_ms": 69.45779989473522,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.006309709511697292,
+            "CENTER": 0.006542125251144171,
+            "RIGHT": 0.006542125251144171,
+            "NONE": 0.9806060194969177
+          },
+          "latency_ms": 69.81560005806386,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.01915566995739937,
+            "CENTER": 0.005650661885738373,
+            "RIGHT": 0.9700315594673157,
+            "NONE": 0.005162087269127369
+          },
+          "latency_ms": 69.94639988988638,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.15152636170387268,
+            "CENTER": 0.37093695998191833,
+            "RIGHT": 0.3577589690685272,
+            "NONE": 0.11977768689393997
+          },
+          "latency_ms": 69.90769994445145,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00185",
+      "instruction": "Choose the digit in a red box.",
+      "gold": "NONE",
+      "predictions": {
+        "normal": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.004707292653620243,
+            "CENTER": 0.004707292653620243,
+            "RIGHT": 0.004622919950634241,
+            "NONE": 0.985962450504303
+          },
+          "latency_ms": 71.20000012218952,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.005472194403409958,
+            "CENTER": 0.005472194403409958,
+            "RIGHT": 0.006210763473063707,
+            "NONE": 0.9828449487686157
+          },
+          "latency_ms": 70.95660013146698,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.005882137455046177,
+            "CENTER": 0.9827418923377991,
+            "RIGHT": 0.0060988059267401695,
+            "NONE": 0.005277236457914114
+          },
+          "latency_ms": 70.18249994143844,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.24132253229618073,
+            "CENTER": 0.40774309635162354,
+            "RIGHT": 0.2204570472240448,
+            "NONE": 0.13047735393047333
+          },
+          "latency_ms": 70.05589990876615,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00098",
+      "instruction": "빨간 상자에 있는 가장 큰 숫자는 어느 위치에 있어?",
+      "gold": "CENTER",
+      "predictions": {
+        "normal": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.024326695129275322,
+            "CENTER": 0.9286255240440369,
+            "RIGHT": 0.025222763419151306,
+            "NONE": 0.02182500623166561
+          },
+          "latency_ms": 69.81370016001165,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.005235348362475634,
+            "CENTER": 0.005235348362475634,
+            "RIGHT": 0.005730857141315937,
+            "NONE": 0.9837983846664429
+          },
+          "latency_ms": 72.7578999940306,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.982907235622406,
+            "CENTER": 0.005936570465564728,
+            "RIGHT": 0.005830164533108473,
+            "NONE": 0.005326069425791502
+          },
+          "latency_ms": 77.96839997172356,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.328269898891449,
+            "CENTER": 0.3109329044818878,
+            "RIGHT": 0.21267490088939667,
+            "NONE": 0.14812231063842773
+          },
+          "latency_ms": 70.91489993035793,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00128",
+      "instruction": "Choose the smallest even digit in a red box.",
+      "gold": "CENTER",
+      "predictions": {
+        "normal": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.005524483509361744,
+            "CENTER": 0.9833037853240967,
+            "RIGHT": 0.005938965827226639,
+            "NONE": 0.005232715979218483
+          },
+          "latency_ms": 70.74139988981187,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.006772350054234266,
+            "CENTER": 0.00689594866707921,
+            "RIGHT": 0.007280454970896244,
+            "NONE": 0.9790512323379517
+          },
+          "latency_ms": 70.53369982168078,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.005479862447828054,
+            "CENTER": 0.9842221140861511,
+            "RIGHT": 0.005381642375141382,
+            "NONE": 0.004916328005492687
+          },
+          "latency_ms": 70.42440003715456,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.3509543538093567,
+            "CENTER": 0.3206096887588501,
+            "RIGHT": 0.16718770563602448,
+            "NONE": 0.16124816238880157
+          },
+          "latency_ms": 69.83489985577762,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00062",
+      "instruction": "가장 큰 홀수를 선택해 줘.",
+      "gold": "NONE",
+      "predictions": {
+        "normal": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.007535838522017002,
+            "CENTER": 0.007535838522017002,
+            "RIGHT": 0.007535838522017002,
+            "NONE": 0.9773924946784973
+          },
+          "latency_ms": 69.73430002108216,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.3209961950778961,
+            "CENTER": 0.18827110528945923,
+            "RIGHT": 0.17832794785499573,
+            "NONE": 0.3124048113822937
+          },
+          "latency_ms": 69.71749989315867,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9653282761573792,
+            "CENTER": 0.02223065309226513,
+            "RIGHT": 0.006557739805430174,
+            "NONE": 0.005883361678570509
+          },
+          "latency_ms": 70.00899990089238,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.2711474597454071,
+            "CENTER": 0.3368704915046692,
+            "RIGHT": 0.2760961651802063,
+            "NONE": 0.1158858984708786
+          },
+          "latency_ms": 70.71970007382333,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00165",
+      "instruction": "Find the largest even digit in a blue box. Which position is it in?",
+      "gold": "NONE",
+      "predictions": {
+        "normal": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.020544635131955147,
+            "CENTER": 0.021301394328475,
+            "RIGHT": 0.020544635131955147,
+            "NONE": 0.9376093745231628
+          },
+          "latency_ms": 70.11760002933443,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.0070787700824439526,
+            "CENTER": 0.007473470643162727,
+            "RIGHT": 0.0073395175859332085,
+            "NONE": 0.978108286857605
+          },
+          "latency_ms": 69.53569990582764,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.456327348947525,
+            "CENTER": 0.5369941592216492,
+            "RIGHT": 0.0035503129474818707,
+            "NONE": 0.0031281171832233667
+          },
+          "latency_ms": 70.81359997391701,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.31445983052253723,
+            "CENTER": 0.3634154200553894,
+            "RIGHT": 0.1827770322561264,
+            "NONE": 0.13934768736362457
+          },
+          "latency_ms": 70.21020003594458,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00175",
+      "instruction": "Pick the odd digit, or choose NONE if there is none.",
+      "gold": "RIGHT",
+      "predictions": {
+        "normal": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.005100796464830637,
+            "CENTER": 0.0051938914693892,
+            "RIGHT": 0.98487389087677,
+            "NONE": 0.004831405822187662
+          },
+          "latency_ms": 70.26769989170134,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.2290504276752472,
+            "CENTER": 0.21306493878364563,
+            "RIGHT": 0.17781323194503784,
+            "NONE": 0.38007134199142456
+          },
+          "latency_ms": 70.98570000380278,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9821783900260925,
+            "CENTER": 0.006040433421730995,
+            "RIGHT": 0.006262932904064655,
+            "NONE": 0.0055181607604026794
+          },
+          "latency_ms": 70.93350007198751,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.30513083934783936,
+            "CENTER": 0.3656233847141266,
+            "RIGHT": 0.18388745188713074,
+            "NONE": 0.14535833895206451
+          },
+          "latency_ms": 69.93069988675416,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00164",
+      "instruction": "빨간 상자에 있는 가장 큰 숫자를 골라.",
+      "gold": "RIGHT",
+      "predictions": {
+        "normal": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.0061006550677120686,
+            "CENTER": 0.005674888379871845,
+            "RIGHT": 0.9830402731895447,
+            "NONE": 0.005184221547096968
+          },
+          "latency_ms": 69.37629985623062,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.005095378030091524,
+            "CENTER": 0.005188373848795891,
+            "RIGHT": 0.005888635758310556,
+            "NONE": 0.9838275909423828
+          },
+          "latency_ms": 69.49230004101992,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.005429753102362156,
+            "CENTER": 0.9840811491012573,
+            "RIGHT": 0.005528850946575403,
+            "NONE": 0.004960278980433941
+          },
+          "latency_ms": 70.47859998419881,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.34949594736099243,
+            "CENTER": 0.30516257882118225,
+            "RIGHT": 0.212537482380867,
+            "NONE": 0.13280397653579712
+          },
+          "latency_ms": 70.80479990690947,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00181",
+      "instruction": "Find the largest even digit. Which position is it in?",
+      "gold": "CENTER",
+      "predictions": {
+        "normal": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.028805462643504143,
+            "CENTER": 0.9124937653541565,
+            "RIGHT": 0.030411599203944206,
+            "NONE": 0.02828916162252426
+          },
+          "latency_ms": 70.58389997109771,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.40598034858703613,
+            "CENTER": 0.2317430078983307,
+            "RIGHT": 0.2446645200252533,
+            "NONE": 0.11761216819286346
+          },
+          "latency_ms": 70.02769992686808,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.00552512239664793,
+            "CENTER": 0.9834174513816833,
+            "RIGHT": 0.005728637799620628,
+            "NONE": 0.005328834522515535
+          },
+          "latency_ms": 70.43719990178943,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.2049463987350464,
+            "CENTER": 0.3655892610549927,
+            "RIGHT": 0.29426324367523193,
+            "NONE": 0.1352011114358902
+          },
+          "latency_ms": 70.23050007410347,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00039",
+      "instruction": "빨간 상자에 있는 가장 작은 짝수는 어느 위치에 있어?",
+      "gold": "CENTER",
+      "predictions": {
+        "normal": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.005285629536956549,
+            "CENTER": 0.9843053817749023,
+            "RIGHT": 0.0055803474970161915,
+            "NONE": 0.004828619305044413
+          },
+          "latency_ms": 69.3510000128299,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.006141838151961565,
+            "CENTER": 0.006368073169142008,
+            "RIGHT": 0.006723142694681883,
+            "NONE": 0.9807668924331665
+          },
+          "latency_ms": 69.86139994114637,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.01903832145035267,
+            "CENTER": 0.01903832145035267,
+            "RIGHT": 0.01938578672707081,
+            "NONE": 0.9425374865531921
+          },
+          "latency_ms": 69.86960000358522,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.1830851286649704,
+            "CENTER": 0.3843255639076233,
+            "RIGHT": 0.2930067181587219,
+            "NONE": 0.1395825743675232
+          },
+          "latency_ms": 69.70699992962182,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00021",
+      "instruction": "Find the even digit in a red box. Which position is it in?",
+      "gold": "NONE",
+      "predictions": {
+        "normal": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.031960971653461456,
+            "CENTER": 0.031960971653461456,
+            "RIGHT": 0.03693671524524689,
+            "NONE": 0.8991413712501526
+          },
+          "latency_ms": 70.83850004710257,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.00625246437266469,
+            "CENTER": 0.00636657839640975,
+            "RIGHT": 0.006844240240752697,
+            "NONE": 0.980536699295044
+          },
+          "latency_ms": 70.7873001229018,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.006896014790982008,
+            "CENTER": 0.007021870464086533,
+            "RIGHT": 0.007021870464086533,
+            "NONE": 0.979060173034668
+          },
+          "latency_ms": 71.0050999186933,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.2614474296569824,
+            "CENTER": 0.43382883071899414,
+            "RIGHT": 0.16336533427238464,
+            "NONE": 0.1413584053516388
+          },
+          "latency_ms": 70.71540015749633,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00101",
+      "instruction": "파란 상자에 있는 홀수를 선택해 줘.",
+      "gold": "LEFT",
+      "predictions": {
+        "normal": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9815738797187805,
+            "CENTER": 0.006091555114835501,
+            "RIGHT": 0.006668101064860821,
+            "NONE": 0.005666423123329878
+          },
+          "latency_ms": 70.61739987693727,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.00881940871477127,
+            "CENTER": 0.009830329567193985,
+            "RIGHT": 0.009311160072684288,
+            "NONE": 0.9720391035079956
+          },
+          "latency_ms": 70.3982999548316,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.007272031623870134,
+            "CENTER": 0.007404749747365713,
+            "RIGHT": 0.007404749747365713,
+            "NONE": 0.9779184460639954
+          },
+          "latency_ms": 70.00910001806915,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.3536703884601593,
+            "CENTER": 0.32898762822151184,
+            "RIGHT": 0.1715565174818039,
+            "NONE": 0.14578546583652496
+          },
+          "latency_ms": 70.29290008358657,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00103",
+      "instruction": "가장 작은 짝수를 찾아. 없으면 NONE을 선택해.",
+      "gold": "LEFT",
+      "predictions": {
+        "normal": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9776186347007751,
+            "CENTER": 0.007537581957876682,
+            "RIGHT": 0.007957861758768559,
+            "NONE": 0.006885857786983252
+          },
+          "latency_ms": 69.89959999918938,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.4299355447292328,
+            "CENTER": 0.20667336881160736,
+            "RIGHT": 0.24541717767715454,
+            "NONE": 0.11797396093606949
+          },
+          "latency_ms": 70.25120011530817,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9766275882720947,
+            "CENTER": 0.008022012189030647,
+            "RIGHT": 0.008022012189030647,
+            "NONE": 0.0073284064419567585
+          },
+          "latency_ms": 70.30680007301271,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.18701693415641785,
+            "CENTER": 0.43757835030555725,
+            "RIGHT": 0.24977989494800568,
+            "NONE": 0.1256248652935028
+          },
+          "latency_ms": 69.9342000298202,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00025",
+      "instruction": "Find the smallest even digit in a blue box. Which position is it in?",
+      "gold": "LEFT",
+      "predictions": {
+        "normal": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9781619310379028,
+            "CENTER": 0.007541771046817303,
+            "RIGHT": 0.0074065933004021645,
+            "NONE": 0.006889684591442347
+          },
+          "latency_ms": 69.59640001878142,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.007077804766595364,
+            "CENTER": 0.007608827203512192,
+            "RIGHT": 0.007338516414165497,
+            "NONE": 0.9779748916625977
+          },
+          "latency_ms": 69.35319979675114,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.007266670931130648,
+            "CENTER": 0.009360577911138535,
+            "RIGHT": 0.9771975874900818,
+            "NONE": 0.0061750770546495914
+          },
+          "latency_ms": 69.97209996916354,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.2123444676399231,
+            "CENTER": 0.3787861466407776,
+            "RIGHT": 0.24988141655921936,
+            "NONE": 0.15898799896240234
+          },
+          "latency_ms": 69.7091999463737,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00024",
+      "instruction": "Select the largest even digit.",
+      "gold": "CENTER",
+      "predictions": {
+        "normal": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.005770538002252579,
+            "CENTER": 0.9816924333572388,
+            "RIGHT": 0.007169250398874283,
+            "NONE": 0.005367810372263193
+          },
+          "latency_ms": 70.01859997399151,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.3118187487125397,
+            "CENTER": 0.24426577985286713,
+            "RIGHT": 0.2980336546897888,
+            "NONE": 0.14588184654712677
+          },
+          "latency_ms": 68.97170003503561,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9814338088035583,
+            "CENTER": 0.0063724033534526825,
+            "RIGHT": 0.0063724033534526825,
+            "NONE": 0.005821424536406994
+          },
+          "latency_ms": 69.6286999154836,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.36237838864326477,
+            "CENTER": 0.29970017075538635,
+            "RIGHT": 0.19770923256874084,
+            "NONE": 0.1402122527360916
+          },
+          "latency_ms": 69.70199989154935,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00001",
+      "instruction": "Pick the odd digit in a blue box, or choose NONE if there is none.",
+      "gold": "RIGHT",
+      "predictions": {
+        "normal": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.006151896435767412,
+            "CENTER": 0.006151896435767412,
+            "RIGHT": 0.9823729991912842,
+            "NONE": 0.005323174875229597
+          },
+          "latency_ms": 69.47450013831258,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.006089747883379459,
+            "CENTER": 0.006314060650765896,
+            "RIGHT": 0.006314060650765896,
+            "NONE": 0.9812822341918945
+          },
+          "latency_ms": 69.94209997355938,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.021467451006174088,
+            "CENTER": 0.021082671359181404,
+            "RIGHT": 0.025262337177991867,
+            "NONE": 0.9321874976158142
+          },
+          "latency_ms": 69.7284999769181,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.2737530469894409,
+            "CENTER": 0.3722977340221405,
+            "RIGHT": 0.19768460094928741,
+            "NONE": 0.15626461803913116
+          },
+          "latency_ms": 69.60360007360578,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00128",
+      "instruction": "홀수는 어느 위치에 있어?",
+      "gold": "LEFT",
+      "predictions": {
+        "normal": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9835044145584106,
+            "CENTER": 0.0056264582090079784,
+            "RIGHT": 0.005729144439101219,
+            "NONE": 0.005139974411576986
+          },
+          "latency_ms": 69.71390009857714,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.37225043773651123,
+            "CENTER": 0.22843152284622192,
+            "RIGHT": 0.19063743948936462,
+            "NONE": 0.20868059992790222
+          },
+          "latency_ms": 70.24630019441247,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.005009829066693783,
+            "CENTER": 0.9849639534950256,
+            "RIGHT": 0.005194366443902254,
+            "NONE": 0.004831847734749317
+          },
+          "latency_ms": 71.04169996455312,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.3509543538093567,
+            "CENTER": 0.3206096887588501,
+            "RIGHT": 0.16718770563602448,
+            "NONE": 0.16124816238880157
+          },
+          "latency_ms": 70.48829994164407,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00109",
+      "instruction": "파란 상자에 있는 홀수를 선택해 줘.",
+      "gold": "CENTER",
+      "predictions": {
+        "normal": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.005882845260202885,
+            "CENTER": 0.9828601479530334,
+            "RIGHT": 0.005882845260202885,
+            "NONE": 0.0053741950541734695
+          },
+          "latency_ms": 69.75320004858077,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.00881940871477127,
+            "CENTER": 0.009830329567193985,
+            "RIGHT": 0.009311160072684288,
+            "NONE": 0.9720391035079956
+          },
+          "latency_ms": 69.77789988741279,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.007083395961672068,
+            "CENTER": 0.007212675176560879,
+            "RIGHT": 0.0069564348086714745,
+            "NONE": 0.9787474870681763
+          },
+          "latency_ms": 69.42919990979135,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.2087193876504898,
+            "CENTER": 0.40388938784599304,
+            "RIGHT": 0.25931060314178467,
+            "NONE": 0.12808065116405487
+          },
+          "latency_ms": 71.17470004595816,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00016",
+      "instruction": "Choose the smallest odd digit.",
+      "gold": "NONE",
+      "predictions": {
+        "normal": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.0059310211800038815,
+            "CENTER": 0.0061494880355894566,
+            "RIGHT": 0.0059310211800038815,
+            "NONE": 0.9819884896278381
+          },
+          "latency_ms": 70.10530005209148,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.26486796140670776,
+            "CENTER": 0.20011527836322784,
+            "RIGHT": 0.23978838324546814,
+            "NONE": 0.29522839188575745
+          },
+          "latency_ms": 70.8115000743419,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9772829413414001,
+            "CENTER": 0.007009124383330345,
+            "RIGHT": 0.009532244876027107,
+            "NONE": 0.006175616756081581
+          },
+          "latency_ms": 71.18070009164512,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.25362446904182434,
+            "CENTER": 0.33266937732696533,
+            "RIGHT": 0.24022969603538513,
+            "NONE": 0.1734764575958252
+          },
+          "latency_ms": 69.87249990925193,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00039",
+      "instruction": "Pick the largest odd digit in a blue box, or choose NONE if there is none.",
+      "gold": "RIGHT",
+      "predictions": {
+        "normal": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.008343459106981754,
+            "CENTER": 0.0064770798198878765,
+            "RIGHT": 0.97967529296875,
+            "NONE": 0.005504097789525986
+          },
+          "latency_ms": 70.12049993500113,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.006774101871997118,
+            "CENTER": 0.007023623213171959,
+            "RIGHT": 0.006897735875099897,
+            "NONE": 0.9793045520782471
+          },
+          "latency_ms": 69.74229984916747,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.007147262804210186,
+            "CENTER": 0.007277706637978554,
+            "RIGHT": 0.006893348414450884,
+            "NONE": 0.9786816239356995
+          },
+          "latency_ms": 69.59119997918606,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.1830851286649704,
+            "CENTER": 0.3843255639076233,
+            "RIGHT": 0.2930067181587219,
+            "NONE": 0.1395825743675232
+          },
+          "latency_ms": 69.59400000050664,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00038",
+      "instruction": "Select the largest digit.",
+      "gold": "LEFT",
+      "predictions": {
+        "normal": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9800414443016052,
+            "CENTER": 0.006965631619095802,
+            "RIGHT": 0.006965631619095802,
+            "NONE": 0.006027291063219309
+          },
+          "latency_ms": 71.18270010687411,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.32245269417762756,
+            "CENTER": 0.32245269417762756,
+            "RIGHT": 0.20148445665836334,
+            "NONE": 0.15361011028289795
+          },
+          "latency_ms": 68.38509999215603,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.005100313574075699,
+            "CENTER": 0.9847805500030518,
+            "RIGHT": 0.005288184154778719,
+            "NONE": 0.004830948077142239
+          },
+          "latency_ms": 70.69249986670911,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.25870582461357117,
+            "CENTER": 0.40294742584228516,
+            "RIGHT": 0.20823261141777039,
+            "NONE": 0.1301140934228897
+          },
+          "latency_ms": 69.92230005562305,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00092",
+      "instruction": "Find the even digit in a blue box. Which position is it in?",
+      "gold": "RIGHT",
+      "predictions": {
+        "normal": {
+          "action": "RIGHT",
+          "probabilities": {
+            "LEFT": 0.0069713229313492775,
+            "CENTER": 0.006368562113493681,
+            "RIGHT": 0.9808422327041626,
+            "NONE": 0.00581791577860713
+          },
+          "latency_ms": 69.38290013931692,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.006309709511697292,
+            "CENTER": 0.006542125251144171,
+            "RIGHT": 0.006542125251144171,
+            "NONE": 0.9806060194969177
+          },
+          "latency_ms": 69.90210013464093,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.016929451376199722,
+            "CENTER": 0.017238423228263855,
+            "RIGHT": 0.01886998489499092,
+            "NONE": 0.9469621181488037
+          },
+          "latency_ms": 70.42649993672967,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.21768350899219513,
+            "CENTER": 0.4062708914279938,
+            "RIGHT": 0.229821115732193,
+            "NONE": 0.14622454345226288
+          },
+          "latency_ms": 70.14900003559887,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00119",
+      "instruction": "빨간 상자에 있는 홀수를 골라.",
+      "gold": "CENTER",
+      "predictions": {
+        "normal": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.005191447213292122,
+            "CENTER": 0.9844104051589966,
+            "RIGHT": 0.005480910651385784,
+            "NONE": 0.004917268641293049
+          },
+          "latency_ms": 70.21759985946119,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.005618870723992586,
+            "CENTER": 0.0058258394710719585,
+            "RIGHT": 0.006377235986292362,
+            "NONE": 0.9821780323982239
+          },
+          "latency_ms": 69.73210000433028,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "NONE",
+          "probabilities": {
+            "LEFT": 0.0052852751687169075,
+            "CENTER": 0.0052852751687169075,
+            "RIGHT": 0.00519054289907217,
+            "NONE": 0.984238862991333
+          },
+          "latency_ms": 69.85830003395677,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.2185365855693817,
+            "CENTER": 0.4115681052207947,
+            "RIGHT": 0.2032848447561264,
+            "NONE": 0.1666105091571808
+          },
+          "latency_ms": 70.00139984302223,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    },
+    {
+      "scene_id": "test_id-00034",
+      "instruction": "Pick the largest even digit, or choose NONE if there is none.",
+      "gold": "LEFT",
+      "predictions": {
+        "normal": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.9820890426635742,
+            "CENTER": 0.006039883941411972,
+            "RIGHT": 0.006150118075311184,
+            "NONE": 0.005720899440348148
+          },
+          "latency_ms": 70.12149994261563,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_image": {
+          "action": "LEFT",
+          "probabilities": {
+            "LEFT": 0.32936087250709534,
+            "CENTER": 0.23357757925987244,
+            "RIGHT": 0.229390949010849,
+            "NONE": 0.20767056941986084
+          },
+          "latency_ms": 70.34739991649985,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "shuffled_image": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.006839338690042496,
+            "CENTER": 0.9798344969749451,
+            "RIGHT": 0.006964160595089197,
+            "NONE": 0.00636201910674572
+          },
+          "latency_ms": 69.87089989706874,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        },
+        "blank_instruction": {
+          "action": "CENTER",
+          "probabilities": {
+            "LEFT": 0.15152636170387268,
+            "CENTER": 0.37093695998191833,
+            "RIGHT": 0.3577589690685272,
+            "NONE": 0.11977768689393997
+          },
+          "latency_ms": 69.6201000828296,
+          "device": "cuda",
+          "dtype": "torch.bfloat16",
+          "cpu_fallback_enabled": false
+        }
+      }
+    }
+  ],
+  "process_rss_bytes": 2285641728,
+  "process_peak_working_set_bytes": 2808365056,
+  "cuda_peak_allocated_bytes": 1869740544,
+  "ablation_accuracy": {
+    "normal": 1.0,
+    "blank_image": 0.21875,
+    "shuffled_image": 0.234375,
+    "blank_instruction": 0.265625
+  },
+  "note": "Ablation accuracy is against the original target. Blank/shuffled inputs deliberately remove required information; this is not a new valid-task benchmark."
+}

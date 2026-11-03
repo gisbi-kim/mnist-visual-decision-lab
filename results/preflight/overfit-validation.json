@@ -1,0 +1,644 @@
+[
+  {
+    "step": 50,
+    "accuracy": 1.0,
+    "predictions": [
+      {
+        "gold": "CENTER",
+        "type": "choice",
+        "choice": "CENTER",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 1.0,
+          "RIGHT": 0.0,
+          "NONE": 0.0
+        },
+        "answer": "CENTER"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "NONE",
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 0.0,
+          "NONE": 1.0
+        },
+        "answer": "NONE"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "LEFT",
+        "type": "choice",
+        "choice": "LEFT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 1.0,
+          "CENTER": 0.0,
+          "RIGHT": 0.0,
+          "NONE": 0.0
+        },
+        "answer": "LEFT"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "CENTER",
+        "type": "choice",
+        "choice": "CENTER",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 1.0,
+          "RIGHT": 0.0,
+          "NONE": 0.0
+        },
+        "answer": "CENTER"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "LEFT",
+        "type": "choice",
+        "choice": "LEFT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 1.0,
+          "CENTER": 0.0,
+          "RIGHT": 0.0,
+          "NONE": 0.0
+        },
+        "answer": "LEFT"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "NONE",
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 0.0,
+          "NONE": 1.0
+        },
+        "answer": "NONE"
+      },
+      {
+        "gold": "NONE",
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.9993,
+        "probabilities": {
+          "LEFT": 0.0003,
+          "CENTER": 0.0002,
+          "RIGHT": 0.0003,
+          "NONE": 0.9993
+        },
+        "answer": "NONE"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      }
+    ]
+  },
+  {
+    "step": 100,
+    "accuracy": 1.0,
+    "predictions": [
+      {
+        "gold": "CENTER",
+        "type": "choice",
+        "choice": "CENTER",
+        "confidence": 0.9999,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.9999,
+          "RIGHT": 0.0001,
+          "NONE": 0.0
+        },
+        "answer": "CENTER"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "NONE",
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 0.0,
+          "NONE": 1.0
+        },
+        "answer": "NONE"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "LEFT",
+        "type": "choice",
+        "choice": "LEFT",
+        "confidence": 0.9999,
+        "probabilities": {
+          "LEFT": 0.9999,
+          "CENTER": 0.0001,
+          "RIGHT": 0.0,
+          "NONE": 0.0
+        },
+        "answer": "LEFT"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "CENTER",
+        "type": "choice",
+        "choice": "CENTER",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 1.0,
+          "RIGHT": 0.0,
+          "NONE": 0.0
+        },
+        "answer": "CENTER"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "LEFT",
+        "type": "choice",
+        "choice": "LEFT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 1.0,
+          "CENTER": 0.0,
+          "RIGHT": 0.0,
+          "NONE": 0.0
+        },
+        "answer": "LEFT"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "NONE",
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 0.0,
+          "NONE": 1.0
+        },
+        "answer": "NONE"
+      },
+      {
+        "gold": "NONE",
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.9999,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 0.0001,
+          "NONE": 0.9999
+        },
+        "answer": "NONE"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      }
+    ]
+  },
+  {
+    "step": 100,
+    "accuracy": 1.0,
+    "predictions": [
+      {
+        "gold": "CENTER",
+        "type": "choice",
+        "choice": "CENTER",
+        "confidence": 0.9999,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.9999,
+          "RIGHT": 0.0001,
+          "NONE": 0.0
+        },
+        "answer": "CENTER"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "NONE",
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 0.0,
+          "NONE": 1.0
+        },
+        "answer": "NONE"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "LEFT",
+        "type": "choice",
+        "choice": "LEFT",
+        "confidence": 0.9999,
+        "probabilities": {
+          "LEFT": 0.9999,
+          "CENTER": 0.0001,
+          "RIGHT": 0.0,
+          "NONE": 0.0
+        },
+        "answer": "LEFT"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "CENTER",
+        "type": "choice",
+        "choice": "CENTER",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 1.0,
+          "RIGHT": 0.0,
+          "NONE": 0.0
+        },
+        "answer": "CENTER"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "LEFT",
+        "type": "choice",
+        "choice": "LEFT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 1.0,
+          "CENTER": 0.0,
+          "RIGHT": 0.0,
+          "NONE": 0.0
+        },
+        "answer": "LEFT"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "NONE",
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 0.0,
+          "NONE": 1.0
+        },
+        "answer": "NONE"
+      },
+      {
+        "gold": "NONE",
+        "type": "choice",
+        "choice": "NONE",
+        "confidence": 0.9999,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 0.0001,
+          "NONE": 0.9999
+        },
+        "answer": "NONE"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      },
+      {
+        "gold": "RIGHT",
+        "type": "choice",
+        "choice": "RIGHT",
+        "confidence": 1.0,
+        "probabilities": {
+          "LEFT": 0.0,
+          "CENTER": 0.0,
+          "RIGHT": 1.0,
+          "NONE": 0.0
+        },
+        "answer": "RIGHT"
+      }
+    ]
+  }
+]

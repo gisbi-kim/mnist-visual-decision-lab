@@ -1,0 +1,10 @@
+{
+  "examples": 16,
+  "weight_sha256": {
+    "adapter_model.safetensors": "5a9c02a2e19b4489f1de06072df6f0ae0ece1f3ed34b106dc3aa95945afcd3f0",
+    "joint_head.safetensors": "fcae47daa41de0b24bff421222607b15057337cc98037db32d510b780bad8b5e"
+  },
+  "action_agreement": 1.0,
+  "max_probability_difference": 0.0011412789344787955,
+  "note": "Separate processes, same saved trained weights, first 16 fixed validation rows. CUDA bfloat16; Unsloth API probabilities rounded to four decimals; external temperature calibration excluded."
+}

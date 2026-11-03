@@ -180,5 +180,7 @@
   ],
   "python_dependencies_download_bytes": 2052544052,
   "base_model_download_bytes": 1769980465,
-  "note": "Python interpreter, Git, pip bootstrap, network metadata overhead and new adapter release are not included in these two components."
+  "note": "Measured package wheels + all pinned base snapshot files + new weight archive. Excludes Python/Git installers, repository transfer and small network metadata. Other platforms differ.",
+  "new_weight_archive_bytes": 86549227,
+  "windows_cuda_core_download_total_bytes": 3909073744
 }

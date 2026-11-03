@@ -32,7 +32,7 @@ def create_app(engine):
         else:
             ids=[rng.randrange(len(examples['images'])) for _ in range(3)]
             colors=[rng.choice(('red','blue')) for _ in range(3)]
-        image=render(examples['images'][ids],colors,rng.randrange(2**31))
+        image=render(examples['images'][ids],colors,0 if canonical else rng.randrange(2**31))
         buffer=BytesIO();image.save(buffer,format='PNG')
         return jsonify(image='data:image/png;base64,'+base64.b64encode(buffer.getvalue()).decode())
     @app.post('/predict')

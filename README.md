@@ -8,8 +8,20 @@ Korean/English synthetic MNIST scenes. The local app sends the actual image and
 the user's original text to that model. It does not parse the instruction into
 a rule or pass MNIST labels to the model.
 
-**Work in progress:** full training/evaluation and a public weight release are
-being prepared. No final test accuracy or Mac GPU performance is claimed yet.
+Trained locally for **69.0 minutes / 6,000 steps** on an **RTX 4070 Ti SUPER
+16 GB**. The released checkpoint was selected at step 2,000 using validation only.
+
+| Held-out evaluation | Accuracy |
+|---|---:|
+| New handwriting | 99.14% |
+| New handwriting + wording | 97.87% |
+| New handwriting + condition combinations | 98.83% |
+| New handwriting + wording + combinations | 97.85% |
+
+See [measured results](RESULTS.md) for sample counts, confidence intervals, the
+CNN+rules comparison, actual probabilities, and failures. The fixed 7/4/3 example
+contains high-confidence mistakes; aggregate accuracy does not guarantee any
+individual answer. CPU and CUDA were measured; **Mac MPS remains unverified**.
 
 ## Local app
 
@@ -29,6 +41,12 @@ py -3.11 -m venv .venv
 .\.venv\Scripts\python.exe download_model.py
 .\.venv\Scripts\python.exe app.py --device cuda
 ```
+
+For Windows CPU inference, substitute the CPU PyTorch wheel index
+`https://download.pytorch.org/whl/cpu` in the installation command and launch
+with `--device cpu`. CPU inference was measured using the working CUDA-enabled
+PyTorch installation; the separately installed CPU-only environment hit the
+Windows policy limitation described below.
 
 ### Apple Silicon Mac (MPS or CPU)
 
@@ -66,6 +84,30 @@ CPU-only wheel and the CUDA wheel. The original dedicated environment runs CPU
 and CUDA inference successfully. Security settings were not changed. A truly
 fresh-environment launch on this machine is therefore not yet verified; an
 organization-managed machine may require its normal software approval process.
+
+## Downloads and measured runtime
+
+[Versioned weights](https://github.com/gisbi-kim/mnist-visual-decision-lab/releases/tag/v0.1.0)
+are distributed through a GitHub Release. No Hugging Face login is required for
+the public base model, and no Git LFS storage is used. `download_model.py` verifies
+the archive, every extracted file and the pinned base files against SHA-256.
+
+| Component | Measured download |
+|---|---:|
+| New LoRA + head + processor/config archive | 86,549,227 bytes (82.54 MiB) |
+| Pinned Qwen base snapshot | 1,769,980,465 bytes (1.77 GB) |
+| Windows CUDA inference package wheels | 2,052,544,052 bytes (2.05 GB) |
+| These components together | 3,909,073,744 bytes (3.91 GB) |
+
+Python/Git installers, repository transfer and small network metadata are not
+included. Other OS/package builds differ; these are download sizes, not installed
+disk usage. Full per-file sizes and checksums are in `release_manifest.json` and
+`docs/download-sizes.json`.
+
+Matched-input median inference was **70.5 ms CUDA / 770.2 ms CPU**, batch 1,
+including preprocessing and synchronization, excluding model initialization and
+download. All 16 compared actions agreed; probabilities differed by up to 0.0283.
+See `results/platform-comparison.json` for the scope and precision differences.
 
 ## Dataset design
 
@@ -166,5 +208,5 @@ No original repository or Space is modified.
 - MNIST: Yann LeCun, Corinna Cortes and Christopher J.C. Burges; downloaded from
   the PyTorch OSSCI mirror, preserving original train/test data. See dataset notes.
 
-See `PROGRESS.md` for current execution status. Final result and release details
-will replace the work-in-progress notice after verification.
+See [execution notes](PROGRESS.md) for environment verification and remaining
+limitations. The original repository and Space remain unchanged.

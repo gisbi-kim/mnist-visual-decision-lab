@@ -14,6 +14,8 @@ def main():
     history=read('runs/main/validation.json')
     training=read('runs/main/metrics.json')
     config=read('runs/main/config.json')
+    platforms=read('results/platform-comparison.json')
+    calibration=read('runs/main/best/calibration.json')
     lines=['# Measured results','',
         'These numbers come from actual saved-weight inference. Test data were not used to select the checkpoint or fit the temperature.','',
         f"Training GPU: {config['gpu']}; {training['train_runtime']/60:.1f} minutes including validation/checkpoint overhead.",
@@ -34,9 +36,16 @@ def main():
     for case in diagnostics['canonical']:
         p=case['prediction'];probs=p['probabilities']
         lines.append(f"| {case['instruction']} | {case['gold']} | {p['action']} | "+' | '.join(f'{probs[a]:.1%}' for a in ('LEFT','CENTER','RIGHT','NONE'))+' |')
+    lines+=['','This fixed example deliberately remains in the report despite failures. The right-hand MNIST image is labeled 3; misreading its handwriting is a plausible explanation, not a directly measured internal recognition result. No final-test example was used for retraining or checkpoint selection.']
     lines+=['','## Input dependence','',
             'Accuracy on a fixed diagnostic subset, scored against the original targets. Blank/shuffled inputs remove required information; these are not new valid-task benchmarks.','']
     lines += [f'- {key}: {value:.2%}' for key,value in diagnostics['ablation_accuracy'].items()]
+    lines+=['','## Device and calibration measurements','',
+        f"Matched CPU/CUDA comparison: {platforms['examples']} inputs, action agreement {platforms['action_agreement']:.1%}, maximum probability difference {platforms['max_probability_difference']:.4f}.",
+        f"Median latency in that matched set: CUDA {platforms['cuda_median_ms']:.1f} ms (bfloat16), CPU {platforms['cpu_median_ms']:.1f} ms (float32).",
+        'Batch size 1, 336 × 112 RGB images; preprocessing, tensor transfer, forward pass, probabilities and device synchronization included. Downloads, initialization and image disk reads excluded. Canonical examples may retain warm-up effects; full test-suite timings are in `results/report.json`.',
+        f"Calibration: temperature {calibration['temperature']:.4f} fitted on {calibration['rows']} separate calibration rows; calibration NLL {calibration['uncalibrated_nll']:.4f} → {calibration['nll']:.4f}.",
+        'Unsloth/portable CUDA parity for the selected trained weights is recorded in `results/backend-comparison.json`. This sample check is not a guarantee of identical outputs on all inputs.']
     lines+=['','## Validation history','','| Step | Fixed validation subset accuracy |','|---:|---:|']
     lines += [f"| {v['step']} | {v['accuracy']:.2%} |" for v in history]
     lines+=['','## Representative failures','',

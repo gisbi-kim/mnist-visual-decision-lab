@@ -1,0 +1,82 @@
+{
+  "url": "http://127.0.0.1:7860",
+  "device": "cuda",
+  "real_model_forward": true,
+  "html_status": 200,
+  "image_size": [
+    336,
+    112
+  ],
+  "canonical_render_matches_report": true,
+  "results": [
+    {
+      "instruction": "빨간 상자에 있는 홀수를 골라.",
+      "gold": "LEFT",
+      "prediction": {
+        "action": "LEFT",
+        "probabilities": {
+          "LEFT": 0.9816972613334656,
+          "CENTER": 0.006203511264175177,
+          "RIGHT": 0.006432014517486095,
+          "NONE": 0.005667135119438171
+        },
+        "latency_ms": 769.7454001754522,
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "cpu_fallback_enabled": false
+      }
+    },
+    {
+      "instruction": "가장 작은 홀수를 골라.",
+      "gold": "RIGHT",
+      "prediction": {
+        "action": "LEFT",
+        "probabilities": {
+          "LEFT": 0.982492208480835,
+          "CENTER": 0.0061526428908109665,
+          "RIGHT": 0.005934060551226139,
+          "NONE": 0.005420986097306013
+        },
+        "latency_ms": 75.56300004944205,
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "cpu_fallback_enabled": false
+      }
+    },
+    {
+      "instruction": "짝수를 골라.",
+      "gold": "CENTER",
+      "prediction": {
+        "action": "CENTER",
+        "probabilities": {
+          "LEFT": 0.007272644899785519,
+          "CENTER": 0.9780013561248779,
+          "RIGHT": 0.007960980758070946,
+          "NONE": 0.006765087600797415
+        },
+        "latency_ms": 73.60809994861484,
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "cpu_fallback_enabled": false
+      }
+    },
+    {
+      "instruction": "파란 상자에 있는 짝수를 골라.",
+      "gold": "NONE",
+      "prediction": {
+        "action": "RIGHT",
+        "probabilities": {
+          "LEFT": 0.0070284041576087475,
+          "CENTER": 0.0070284041576087475,
+          "RIGHT": 0.9799705743789673,
+          "NONE": 0.005972601938992739
+        },
+        "latency_ms": 75.93749999068677,
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "cpu_fallback_enabled": false
+      }
+    }
+  ],
+  "browser_visual_test": "unverified; browser automation disabled in Work settings"
+}
