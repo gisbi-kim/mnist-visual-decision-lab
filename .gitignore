@@ -1,0 +1,13 @@
+.venv/
+data/
+runs/
+reference/
+__pycache__/
+*.log
+.cache/
+unsloth_compiled_cache/
+weights/
+dist/
+.verify-env/
+.downloads/
+.verify-cache/

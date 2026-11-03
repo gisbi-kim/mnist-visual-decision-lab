@@ -1,0 +1,20 @@
+{
+  "gold_changes_do_not_change_tokens": true,
+  "gold_changes_do_not_change_pixels": true,
+  "blank_image_changes_pixel_tensor": true,
+  "instruction_changes_input_tokens": true,
+  "sequence_length": 279,
+  "media_shapes": {
+    "pixel_values": [
+      280,
+      1536
+    ],
+    "image_grid_thw": [
+      1,
+      3
+    ]
+  },
+  "instruction": "빨간 상자에 있는 가장 작은 짝수를 골라.",
+  "decoded_prompt": "<|im_start|>system\nRead the complete state and schema. Decide every field jointly. Each answer must be exactly one of that field's allowed options.<|im_end|>\n<|im_start|>user\nSTATE:\n<|vision_start|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|vision_end|>\n빨간 상자에 있는 가장 작은 짝수를 골라.\n\nSCHEMA FIELDS:\n\nFIELD 1\nID: select\nTYPE: choice\nINSTRUCTION: Follow the user instruction using the three handwritten digits and colored borders in the image. Select the matching position. NONE means no digit satisfies the condition.\nALLOWED OPTIONS:\nOPTION 1: {\"description\":\"Choose the center digit.\",\"option_id\":\"CENTER\"}\nOPTION 2: {\"description\":\"Choose the left digit.\",\"option_id\":\"LEFT\"}\nOPTION 3: {\"description\":\"No digit satisfies the instruction.\",\"option_id\":\"NONE\"}\nOPTION 4: {\"description\":\"Choose the right digit.\",\"option_id\":\"RIGHT\"}\nEND FIELD\n\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\nJOINT SCHEMA DECISIONS:",
+  "note": "Actual Clef encoder and saved processor probe; arbitrary gold/slot metadata are ignored, image pixels and raw user text are retained."
+}

@@ -1,0 +1,42 @@
+{
+  "type": "CNN + border color + limited vocabulary rules",
+  "device": "cpu",
+  "train_seconds": 3.0780088999308646,
+  "training_glyph_occurrences": 6795,
+  "epochs": 8,
+  "suites": {
+    "test_id": {
+      "count": 1504,
+      "accuracy": 0.9521276595744681,
+      "invalid_ties": 19,
+      "parser_accuracy": 1.0,
+      "median_latency_ms": 0.876300036907196,
+      "latency_scope": "Disk image read, crop preprocessing, CNN, color detection and rule execution; CPU"
+    },
+    "test_language": {
+      "count": 1504,
+      "accuracy": 0.9700797872340425,
+      "invalid_ties": 7,
+      "parser_accuracy": 1.0,
+      "median_latency_ms": 0.8729000110179186,
+      "latency_scope": "Disk image read, crop preprocessing, CNN, color detection and rule execution; CPU"
+    },
+    "test_composition": {
+      "count": 1024,
+      "accuracy": 0.95703125,
+      "invalid_ties": 2,
+      "parser_accuracy": 1.0,
+      "median_latency_ms": 0.8786501130089164,
+      "latency_scope": "Disk image read, crop preprocessing, CNN, color detection and rule execution; CPU"
+    },
+    "test_combined": {
+      "count": 1024,
+      "accuracy": 0.96484375,
+      "invalid_ties": 2,
+      "parser_accuracy": 1.0,
+      "median_latency_ms": 0.8695501601323485,
+      "latency_scope": "Disk image read, crop preprocessing, CNN, color detection and rule execution; CPU"
+    }
+  },
+  "limitations": "Known three-slot layout and template vocabulary. Deterministic rule outputs are not calibrated probabilities; NLL/ECE are not reported."
+}
